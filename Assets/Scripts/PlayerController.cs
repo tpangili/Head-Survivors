@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed;
     public float focusSpeed;
-    private Vector2 movementInput;
+    public Vector2 movementInput;
+    //public Vector2 moveDir;
 
     [Header("References")]
     Rigidbody2D body;
