@@ -8,7 +8,12 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float focusSpeed;
     public Vector2 movementInput;
-    //public Vector2 moveDir;
+    [HideInInspector]
+    public float lastHorizontalVector;
+    [HideInInspector]
+    public float lastVerticalVector;
+    [HideInInspector]
+    public Vector2 lastMovedVector;
 
     [Header("References")]
     Rigidbody2D body;
@@ -31,12 +36,32 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         sprite.enabled = false;
+        lastMovedVector = new Vector2(1, 0f); // Projectiles shoot right by default
     }
 
     private void Update()
     {
         //Getting movement input
         movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        // Tracks last moved x and y directions
+        // (Used for any weapon aiming based on direction of player movement)
+        if(movementInput.x != 0)
+        {
+            lastHorizontalVector = movementInput.x;
+            lastMovedVector = new Vector2(lastHorizontalVector, 0f);
+        }
+        if(movementInput.y != 0)
+        {
+            lastVerticalVector = movementInput.y;
+            lastMovedVector = new Vector2(0f, lastVerticalVector);
+        }
+
+        // Tracks last moved direction while moving
+        if(movementInput.x != 0 && movementInput.y != 0)
+        {
+            lastMovedVector = new Vector2(lastHorizontalVector, lastVerticalVector);
+        }
     }
 
     private void FixedUpdate()

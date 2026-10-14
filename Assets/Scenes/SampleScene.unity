@@ -229,6 +229,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 696639312}
   offset: {x: 0, y: 0, z: -10}
+--- !u!1 &641569712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 641569713}
+  - component: {fileID: 641569714}
+  m_Layer: 7
+  m_Name: Knife Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &641569713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641569712}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.038749844, y: -0.8510113, z: 0.058306813}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 696639312}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &641569714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641569712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e97f03263cd9e488b3b720ed346c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1229129599900878757, guid: ba7020ae80cd02c4eac7db13ca2756a1, type: 3}
+  damage: 0
+  speed: 10
+  cooldownDuration: 2
+  pierce: 0
 --- !u!4 &696639312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8323754119992055678, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
@@ -386,6 +435,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2723074599770436212, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007930090200329316, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4130195236981548741, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.038749844
@@ -432,7 +489,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8323754119992055678, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 641569713}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
 --- !u!1001 &7871803067194312040
