@@ -5,14 +5,16 @@ using UnityEngine;
 public class GarlicController : WeaponController
 {
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Attack()
     {
-        
+        base.Attack();
+        GameObject spawnedGarlic = Instantiate(prefab);
+        spawnedGarlic.transform.position = transform.position;  // Same position as object parented to player
+        spawnedGarlic.transform.parent = transform;             // Spawns below object
     }
 }
