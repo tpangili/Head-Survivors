@@ -6,12 +6,8 @@ using UnityEngine.Timeline;
 public class WeaponController : MonoBehaviour
 {
     [Header("Weapon Stats")]
-    public GameObject prefab;
-    public float damage;
-    public float speed;
-    public float cooldownDuration;
+    public WeaponScriptableObject weaponData;
     private float currentCooldown;
-    public int pierce;      // max times weapon can hit enemy before destroyed
 
     protected PlayerController pm;
 
@@ -21,7 +17,7 @@ public class WeaponController : MonoBehaviour
     {
         pm = FindObjectOfType<PlayerController>();
         // Weapon has to wait for cooldown before activating
-        currentCooldown = cooldownDuration;
+        currentCooldown = weaponData.CooldownDuration;
     }
 
     // Update is called once per frame
@@ -38,6 +34,6 @@ public class WeaponController : MonoBehaviour
     protected virtual void Attack()
     {
         // Reset cooldown after attack
-        currentCooldown = cooldownDuration;
+        currentCooldown = weaponData.CooldownDuration;
     }
 }

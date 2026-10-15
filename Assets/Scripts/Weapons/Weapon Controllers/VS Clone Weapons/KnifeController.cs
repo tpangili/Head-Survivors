@@ -13,7 +13,7 @@ public class KnifeController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedKnife = Instantiate(prefab);
+        GameObject spawnedKnife = Instantiate(weaponData.Prefab);
         // Position assigned to same as object parented to player
         // That way it spawns from the same spot within the player
         spawnedKnife.transform.position = transform.position;
