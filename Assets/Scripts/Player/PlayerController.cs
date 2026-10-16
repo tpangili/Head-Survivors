@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
-    public float focusSpeed;
+    private float currentMoveSpeed;
+    //public float focusSpeed;  // Half the current speed
     public Vector2 movementInput;
     [HideInInspector]
     public float lastHorizontalVector;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] private GameObject sprite;
     public Renderer sprite;     // Hitbox sprite
     public Renderer spriteBig;  // Actual player sprite surrounding hitbox
+    public CharacterScriptableObject characterData; // Contains character stats
 
     [Header("Stats")]
     //public int collectCount;
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        currentMoveSpeed = characterData.MoveSpeed;
     }
 
     private void Start()
@@ -69,13 +72,13 @@ public class PlayerController : MonoBehaviour
         // Focus movement: character moves slower while shift is held
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            body.MovePosition(body.position + movementInput * focusSpeed * Time.fixedDeltaTime);
+            body.MovePosition(body.position + movementInput * (currentMoveSpeed/2) * Time.fixedDeltaTime);
             sprite.enabled = true;  // Hitbox is visible while focusing
         }
         else
         {
             // Normal movement
-            body.MovePosition(body.position + movementInput * moveSpeed * Time.fixedDeltaTime);
+            body.MovePosition(body.position + movementInput * currentMoveSpeed * Time.fixedDeltaTime);
             sprite.enabled = false; // Hitbox is invisible during normal movement
         }
     }
