@@ -516,6 +516,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat
       objectReference: {fileID: 0}
+    - target: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2567991587201277730, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -539,7 +543,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1770048091928041593, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2723074599770436212, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: m_SortingOrder
@@ -588,6 +592,10 @@ PrefabInstance:
     - target: {fileID: 4130195236981548741, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393493829694888142, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5770146542001620097, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: m_Name

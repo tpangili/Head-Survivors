@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 2632838821379515133}
   - component: {fileID: 2089001064504699295}
   - component: {fileID: 4993760816439430549}
+  - component: {fileID: 6103271092941630225}
   m_Layer: 7
   m_Name: Hitbox
   m_TagString: Untagged
@@ -283,7 +284,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &2089001064504699295
@@ -305,10 +306,6 @@ MonoBehaviour:
   sprite: {fileID: 2723074599770436212}
   spriteBig: {fileID: 3007930090200329316}
   characterData: {fileID: 11400000, guid: 4ff3e9b25887ca04b8ee6b6690691ca7, type: 2}
-  health: 0
-  invinciSeconds: 0
-  invinciTimeDelta: 0
-  isInvincible: 0
 --- !u!114 &4993760816439430549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +319,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 4ff3e9b25887ca04b8ee6b6690691ca7, type: 2}
+  invinciSeconds: 1.5
+  invinciTimeDelta: 0.15
+  isInvincible: 0
+  spriteBig: {fileID: 3007930090200329316}
   experience: 0
   level: 1
   experienceCap: 0
@@ -332,6 +333,41 @@ MonoBehaviour:
   - startLevel: 4
     endLevel: 5
     experienceCapIncrease: 100
+--- !u!58 &6103271092941630225
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4393493829694888142}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0047413856, y: -0.03318981}
+  serializedVersion: 2
+  m_Radius: 0.0647781
 --- !u!1 &5770146542001620097
 GameObject:
   m_ObjectHideFlags: 0

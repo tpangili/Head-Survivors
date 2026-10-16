@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2567991587201277730}
   - component: {fileID: -8798383116410302202}
   - component: {fileID: 4146914079109591997}
+  - component: {fileID: -6032571724904980546}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Enemy
@@ -175,3 +176,30 @@ MonoBehaviour:
   - name: Blue Exp
     itemPrefab: {fileID: 3111728068395767218, guid: f9470e09d76138e4d96f070790dacb20, type: 3}
     dropRate: 50
+--- !u!50 &-6032571724904980546
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918094212575226413}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

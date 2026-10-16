@@ -14,6 +14,16 @@ public class PlayerStats : MonoBehaviour
     float currentMight;
     float currentProjectileSpeed;
 
+    // Invincibility frame data
+    [SerializeField]
+    private float invinciSeconds;
+    [SerializeField]
+    private float invinciTimeDelta;
+    [HideInInspector]
+    public bool isInvincible = false;
+
+    public Renderer spriteBig;
+
     // Experience and Level
     [Header("Experience/Level")]
     public int experience = 0;
@@ -78,5 +88,51 @@ public class PlayerStats : MonoBehaviour
             }
             experienceCap += experienceCapIncrease;
         }
+    }
+
+    public void TakeDamage(float dmg)
+    {
+        if(currentHealth > 0)
+        {
+            currentHealth -= dmg;
+        }
+        if(currentHealth <= 0)
+        {
+            Kill();
+        }
+        // Activates invincibility frames
+        StartCoroutine(BecomeTemporarilyInvincible());
+    }
+
+    public void Kill()
+    {
+        Debug.Log("PLAYER IS DEAD");
+        return;
+    }
+
+    private IEnumerator BecomeTemporarilyInvincible()
+    {
+        //Debug.Log("Player turned invincible!");
+        isInvincible = true;
+
+        // Iterates through the seconds of being invincible
+        for (float i = 0; i < invinciSeconds; i += invinciTimeDelta)
+        {
+            // Makes player sprite flash during i frames
+            if (spriteBig.enabled)
+            {
+                spriteBig.enabled = false;
+            }
+            else
+            {
+                spriteBig.enabled = true;
+            }
+            yield return new WaitForSeconds(invinciTimeDelta);
+        }
+
+        // Restores default sprite state and removes invincibility
+        spriteBig.enabled = true;
+        isInvincible = false;
+        //Debug.Log("Player is no longer invincible!");
     }
 }

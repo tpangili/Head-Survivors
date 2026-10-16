@@ -23,12 +23,12 @@ public class PlayerController : MonoBehaviour
     public Renderer spriteBig;  // Actual player sprite surrounding hitbox
     public CharacterScriptableObject characterData; // Contains character stats
 
-    [Header("Stats")]
+    /*[Header("Stats")]
     //public int collectCount;
     public int health;
     [SerializeField] private float invinciSeconds;
     [SerializeField] private float invinciTimeDelta;
-    public bool isInvincible = false;
+    public bool isInvincible = false;*/
 
     private void Awake()
     {
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void LoseHealth()
+    /*public void LoseHealth()
     {
         // Take away health
         if (health > 0)
@@ -126,5 +126,5 @@ public class PlayerController : MonoBehaviour
         spriteBig.enabled = true;
         isInvincible = false;
         //Debug.Log("Player is no longer invincible!");
-    }
+    }*/
 }

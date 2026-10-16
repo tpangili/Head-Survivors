@@ -19,24 +19,27 @@ public class DropRateManager : MonoBehaviour
     // Drops item upon destroying enemy/misc.
     void OnDestroy()
     {
-        float randomNumber = UnityEngine.Random.Range(0f, 100f);
-        List<Drops> possibleDrops = new List<Drops>();
+        if (gameObject.scene.isLoaded)
+        {
+            float randomNumber = UnityEngine.Random.Range(0f, 100f);
+            List<Drops> possibleDrops = new List<Drops>();
 
-        foreach(Drops rate in drops)
-        {
-            // Checks rarity of each possible drop compared to the generated number
-            // Ex: Generate 30, get item with 40% drop rates but not 25%
-            if(randomNumber <= rate.dropRate)
+            foreach(Drops rate in drops)
             {
-                possibleDrops.Add(rate);
+                // Checks rarity of each possible drop compared to the generated number
+                // Ex: Generate 30, get item with 40% drop rates but not 25%
+                if(randomNumber <= rate.dropRate)
+                {
+                    possibleDrops.Add(rate);
+                }
             }
-        }
-        // Check if there are possible drops
-        if(possibleDrops.Count > 0)
-        {
-            // Chooses a random item among the possible drops to spawn
-            Drops drops = possibleDrops[UnityEngine.Random.Range(0, possibleDrops.Count)];
-            Instantiate(drops.itemPrefab, transform.position, Quaternion.identity);
+            // Check if there are possible drops
+            if(possibleDrops.Count > 0)
+            {
+                // Chooses a random item among the possible drops to spawn
+                Drops drops = possibleDrops[UnityEngine.Random.Range(0, possibleDrops.Count)];
+                Instantiate(drops.itemPrefab, transform.position, Quaternion.identity);
+            }
         }
     }
 }

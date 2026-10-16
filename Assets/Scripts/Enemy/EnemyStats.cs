@@ -33,4 +33,18 @@ public class EnemyStats : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("COLLIDE");
+        // Reference the script from the collided collider and deal damage using TakeDamage()
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
+            if (!player.isInvincible)
+            {
+                player.TakeDamage(currentDamage);
+            }
+        }
+    }
 }
