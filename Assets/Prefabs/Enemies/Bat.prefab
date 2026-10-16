@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 193602656815968077}
   - component: {fileID: 2567991587201277730}
   - component: {fileID: -8798383116410302202}
+  - component: {fileID: 4146914079109591997}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Enemy
@@ -158,3 +159,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 0f527cbed7108564089ef8c3b6dd1905, type: 2}
+--- !u!114 &4146914079109591997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918094212575226413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8e8e890a8b2b34a838b586b20ba9b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Blue Exp
+    itemPrefab: {fileID: 3111728068395767218, guid: f9470e09d76138e4d96f070790dacb20, type: 3}
+    dropRate: 50
