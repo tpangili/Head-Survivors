@@ -7,9 +7,12 @@ public class EnemyStats : MonoBehaviour
     public EnemyScriptableObject enemyData;
 
     // Current stats
-    float currentMoveSpeed;
-    float currentHealth;
-    float currentDamage;
+    [HideInInspector]
+    public float currentMoveSpeed;
+    [HideInInspector]
+    public float currentHealth;
+    [HideInInspector]
+    public float currentDamage;
 
     void Awake()
     {
@@ -36,7 +39,7 @@ public class EnemyStats : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("COLLIDE");
+        //Debug.Log("COLLIDE");
         // Reference the script from the collided collider and deal damage using TakeDamage()
         if(collision.gameObject.CompareTag("Player"))
         {

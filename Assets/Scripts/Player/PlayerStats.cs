@@ -8,18 +8,26 @@ public class PlayerStats : MonoBehaviour
     public CharacterScriptableObject characterData;
 
     // Current player stats
-    float currentHealth;
-    float currentMaxHealth;
-    float currentRecovery;
-    float currentMoveSpeed;
-    float currentMight;
-    float currentProjectileSpeed;
+    [HideInInspector]
+    public float currentHealth;
+    [HideInInspector]
+    public float currentMaxHealth;
+    [HideInInspector]
+    public float currentRecovery;
+    [HideInInspector]
+    public float currentMoveSpeed;
+    [HideInInspector]
+    public float currentMight;
+    [HideInInspector]
+    public float currentProjectileSpeed;
+    [HideInInspector]
+    public float currentMagnet;
 
     // Invincibility frame data
-    [SerializeField]
-    private float invinciSeconds;
-    [SerializeField]
-    private float invinciTimeDelta;
+    [HideInInspector]
+    public float currentInvinciSeconds;
+    [HideInInspector]
+    public float currentInvinciTimeDelta;
     [HideInInspector]
     public bool isInvincible = false;
 
@@ -53,6 +61,9 @@ public class PlayerStats : MonoBehaviour
         currentMoveSpeed = characterData.MoveSpeed;
         currentMight = characterData.Might;
         currentProjectileSpeed = characterData.ProjectileSpeed;
+        currentInvinciSeconds = characterData.InvinciSeconds;
+        currentInvinciTimeDelta = characterData.InvinciTimeDelta;
+        currentMagnet = characterData.Magnet;
     }
 
     private void Start()
@@ -118,7 +129,7 @@ public class PlayerStats : MonoBehaviour
         isInvincible = true;
 
         // Iterates through the seconds of being invincible
-        for (float i = 0; i < invinciSeconds; i += invinciTimeDelta)
+        for (float i = 0; i < currentInvinciSeconds; i += currentInvinciTimeDelta)
         {
             // Makes player sprite flash during i frames
             if (spriteBig.enabled)
@@ -129,7 +140,7 @@ public class PlayerStats : MonoBehaviour
             {
                 spriteBig.enabled = true;
             }
-            yield return new WaitForSeconds(invinciTimeDelta);
+            yield return new WaitForSeconds(currentInvinciTimeDelta);
         }
 
         // Restores default sprite state and removes invincibility

@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &316394935
 Transform:
   m_ObjectHideFlags: 0
@@ -474,11 +474,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 416060294825109288, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.0648875
+      value: 3.73
       objectReference: {fileID: 0}
     - target: {fileID: 416060294825109288, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2517357
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 416060294825109288, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -522,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2567991587201277730, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4146914079109591997, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
       propertyPath: drops.Array.data[0].dropRate
@@ -541,10 +541,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1770048091928041593, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 2723074599770436212, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: m_SortingOrder
       value: 20
@@ -685,6 +681,10 @@ PrefabInstance:
     - target: {fileID: 5085980124626375334, guid: 5f5ca74ff304ee042b60465214e2642c, type: 3}
       propertyPath: m_Name
       value: Health Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085980124626375334, guid: 5f5ca74ff304ee042b60465214e2642c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6829495447420137983, guid: 5f5ca74ff304ee042b60465214e2642c, type: 3}
       propertyPath: m_LocalPosition.x

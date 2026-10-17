@@ -18,10 +18,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("References")]
     Rigidbody2D body;
+    PlayerStats player;
     //[SerializeField] private GameObject sprite;
     public Renderer sprite;     // Hitbox sprite
     public Renderer spriteBig;  // Actual player sprite surrounding hitbox
-    public CharacterScriptableObject characterData; // Contains character stats
 
     /*[Header("Stats")]
     //public int collectCount;
@@ -32,8 +32,9 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        player = GetComponent<PlayerStats>();
         body = GetComponent<Rigidbody2D>();
-        currentMoveSpeed = characterData.MoveSpeed;
+        currentMoveSpeed = player.currentMoveSpeed;
     }
 
     private void Start()

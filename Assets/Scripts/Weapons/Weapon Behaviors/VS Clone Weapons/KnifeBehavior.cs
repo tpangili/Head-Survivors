@@ -14,6 +14,6 @@ public class KnifeBehavior : ProjectileWeaponBehavior
     void Update()
     {
         // Set movement of knife
-        transform.position += direction * weaponData.Speed * Time.deltaTime;
+        transform.position += direction * currentSpeed * Time.deltaTime;
     }
 }
