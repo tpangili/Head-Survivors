@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour
 
     // Current player stats
     float currentHealth;
+    float currentMaxHealth;
     float currentRecovery;
     float currentMoveSpeed;
     float currentMight;
@@ -47,6 +48,7 @@ public class PlayerStats : MonoBehaviour
     {
         // Initialize starting character stats
         currentHealth = characterData.MaxHealth;
+        currentMaxHealth = characterData.MaxHealth;
         currentRecovery = characterData.Recovery;
         currentMoveSpeed = characterData.MoveSpeed;
         currentMight = characterData.Might;
@@ -134,5 +136,18 @@ public class PlayerStats : MonoBehaviour
         spriteBig.enabled = true;
         isInvincible = false;
         //Debug.Log("Player is no longer invincible!");
+    }
+
+    public void RestoreHealth(float amount)
+    {
+        if(currentHealth < currentMaxHealth)
+        {
+            currentHealth += amount;
+
+            if(currentHealth > currentMaxHealth)
+            {
+                currentHealth = currentMaxHealth;
+            }
+        }
     }
 }
