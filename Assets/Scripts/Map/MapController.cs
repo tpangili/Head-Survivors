@@ -148,7 +148,7 @@ public class MapController : MonoBehaviour
     {
         if (terrainChunks.Length < 1) return null;
         int rand = variant < 0 ? Random.Range(0, terrainChunks.Length) : variant;
-        Debug.Log("about to spawn chunk");
+        //Debug.Log("about to spawn chunk");
         GameObject chunk = Instantiate(terrainChunks[rand], transform);
         chunk.transform.position = spawnPosition;
         return chunk;

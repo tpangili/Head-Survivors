@@ -146,7 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8c82eb2cbd71649b193ddc5389ec6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 0f527cbed7108564089ef8c3b6dd1905, type: 2}
 --- !u!114 &-8798383116410302202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 0f527cbed7108564089ef8c3b6dd1905, type: 2}
+  currentMoveSpeed: 0
+  currentHealth: 0
+  currentDamage: 0
+  despawnDistance: 20
 --- !u!114 &4146914079109591997
 MonoBehaviour:
   m_ObjectHideFlags: 0
