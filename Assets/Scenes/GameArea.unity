@@ -1021,6 +1021,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4993760816439430549, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: firstPassiveItemTest
+      value: 
+      objectReference: {fileID: 7460736754103950151, guid: 0d0f94dacda45384aaef83244a6c71d7, type: 3}
+    - target: {fileID: 4993760816439430549, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: secondPassiveItemTest
+      value: 
+      objectReference: {fileID: 4136058470515907199, guid: 6fae34a5a2e168a4f822b1d97dae2d45, type: 3}
+    - target: {fileID: 4993760816439430549, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: spawnedWeapons.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -1035,8 +1043,44 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4393493829694888142, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7070735785472306503}
   m_SourcePrefab: {fileID: 100100000, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+--- !u!1 &7070735785472306502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4393493829694888142, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+  m_PrefabInstance: {fileID: 7070735785472306501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7070735785472306503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7070735785472306502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18dc55a4992fd845b03fae7d7856b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  weaponLevels: 000000000000000000000000000000000000000000000000
+  passiveItemSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  passiveItemLevels: 000000000000000000000000000000000000000000000000
 --- !u!1001 &7871803067194312040
 PrefabInstance:
   m_ObjectHideFlags: 0
