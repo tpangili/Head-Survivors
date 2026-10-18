@@ -18,7 +18,7 @@ public class GarlicBehavior : MeleeWeaponBehavior
         if(col.CompareTag("Enemy") && !markedEnemies.Contains(col.gameObject))
         {
             EnemyStats enemy = col.GetComponent<EnemyStats>();
-            enemy.TakeDamage(currentDamage);
+            enemy.TakeDamage(GetCurrentDamage());
 
             // Mark enemy so it doesn't take continuous damage
             markedEnemies.Add(col.gameObject);
@@ -27,7 +27,7 @@ public class GarlicBehavior : MeleeWeaponBehavior
         {
             if(col.gameObject.TryGetComponent(out BreakableProps breakable) && !markedEnemies.Contains(col.gameObject))
             {
-                breakable.TakeDamage(currentDamage);
+                breakable.TakeDamage(GetCurrentDamage());
                 markedEnemies.Add(col.gameObject);
                 //ReducePierce();
             }

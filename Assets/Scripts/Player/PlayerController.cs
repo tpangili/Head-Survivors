@@ -6,7 +6,7 @@ using UnityEngine.TextCore.Text;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    private float currentMoveSpeed;
+    //private float currentMoveSpeed;
     //public float focusSpeed;  // Half the current speed
     public Vector2 movementInput;
     [HideInInspector]
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         player = GetComponent<PlayerStats>();
         body = GetComponent<Rigidbody2D>();
-        currentMoveSpeed = player.currentMoveSpeed;
+        //currentMoveSpeed = player.currentMoveSpeed;
     }
 
     private void Start()
@@ -73,13 +73,13 @@ public class PlayerController : MonoBehaviour
         // Focus movement: character moves slower while shift is held
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            body.MovePosition(body.position + movementInput * (currentMoveSpeed/2) * Time.fixedDeltaTime);
+            body.MovePosition(body.position + movementInput * (player.currentMoveSpeed/2) * Time.fixedDeltaTime);
             sprite.enabled = true;  // Hitbox is visible while focusing
         }
         else
         {
             // Normal movement
-            body.MovePosition(body.position + movementInput * currentMoveSpeed * Time.fixedDeltaTime);
+            body.MovePosition(body.position + movementInput * player.currentMoveSpeed * Time.fixedDeltaTime);
             sprite.enabled = false; // Hitbox is invisible during normal movement
         }
     }
