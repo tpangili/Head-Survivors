@@ -11,6 +11,10 @@ public class WeaponController : MonoBehaviour
 
     protected PlayerController pm;
 
+    public Sprite restSprite;
+    public Sprite attackSprite;
+    public SpriteRenderer headDisplay;
+
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -35,5 +39,16 @@ public class WeaponController : MonoBehaviour
     {
         // Reset cooldown after attack
         currentCooldown = weaponData.CooldownDuration;
+        if (attackSprite != null && restSprite != null)
+        {
+            StartCoroutine(AttackAnim());
+        }
+    }
+
+    IEnumerator AttackAnim()
+    {
+        headDisplay.sprite = attackSprite;
+        yield return new WaitForSeconds(2);
+        headDisplay.sprite = restSprite;
     }
 }

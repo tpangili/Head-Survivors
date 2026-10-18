@@ -25,4 +25,12 @@ public class WeaponScriptableObject : ScriptableObject
     [SerializeField]
     int pierce;      // max times weapon can hit enemy before destroyed
     public int Pierce { get => pierce; private set => pierce = value; }
+
+    [SerializeField]
+    Sprite head;
+    public Sprite Head { get => head; private set => head = value; }
+
+    [SerializeField]
+    Sprite headAction;
+    public Sprite HeadAction { get => headAction; private set => headAction = value; }
 }
