@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public CharacterScriptableObject characterData;
+    CharacterScriptableObject characterData;
 
     // Current player stats
     [HideInInspector]
@@ -22,6 +22,10 @@ public class PlayerStats : MonoBehaviour
     public float currentProjectileSpeed;
     [HideInInspector]
     public float currentMagnet;
+
+    // Spawned Weapon
+    // NOTE: Heads equipped are classified as weapons
+    public List<GameObject> spawnedWeapons;
 
     // Invincibility frame data
     [HideInInspector]
@@ -54,6 +58,10 @@ public class PlayerStats : MonoBehaviour
 
     void Awake()
     {
+        // Assigns data based on selected character
+        characterData = CharacterSelector.GetData();
+        CharacterSelector.instance.DestroySingleton();
+
         // Initialize starting character stats
         currentHealth = characterData.MaxHealth;
         currentMaxHealth = characterData.MaxHealth;
@@ -64,6 +72,9 @@ public class PlayerStats : MonoBehaviour
         currentInvinciSeconds = characterData.InvinciSeconds;
         currentInvinciTimeDelta = characterData.InvinciTimeDelta;
         currentMagnet = characterData.Magnet;
+
+        // Spawn starting weapon
+        SpawnWeapon(characterData.StartingWeapon);
     }
 
     private void Start()
@@ -160,5 +171,13 @@ public class PlayerStats : MonoBehaviour
                 currentHealth = currentMaxHealth;
             }
         }
+    }
+
+    public void SpawnWeapon(GameObject weapon)
+    {
+        // Spawn the starting weapon
+        GameObject spawnedWeapon = Instantiate(weapon, transform.position, Quaternion.identity);
+        spawnedWeapon.transform.SetParent(transform); // Weapon is child of the player
+        spawnedWeapons.Add(spawnedWeapon); // Add to list of spawned weapons
     }
 }
