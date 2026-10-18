@@ -46,6 +46,7 @@ public class MeleeWeaponBehavior : MonoBehaviour
         {
             EnemyStats enemy = col.GetComponent<EnemyStats>();
             enemy.TakeDamage(GetCurrentDamage());
+            Debug.Log("damage");
             //ReducePierce();
         }
         else if(col.CompareTag("Prop"))
