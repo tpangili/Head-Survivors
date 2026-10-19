@@ -13,21 +13,53 @@ public class InventoryManager : MonoBehaviour
     public void AddWeapon(int slotIndex, WeaponController weapon)
     {
         weaponSlots[slotIndex] = weapon;
+        weaponLevels[slotIndex] = weapon.weaponData.Level;
     }
 
     // Adds passive item to specific inventory slot
     public void AddPassiveItem(int slotIndex, PassiveItem passiveItem)
     {
         passiveItemSlots[slotIndex] = passiveItem;
+        passiveItemLevels[slotIndex] = passiveItem.passiveItemData.Level;
     }
 
     public void LevelUpWeapon(int slotIndex)
     {
-        // insert code here
+        if(weaponSlots.Count > slotIndex)
+        {
+            WeaponController weapon = weaponSlots[slotIndex];
+            // Checks if current weapon has a next level
+            if (!weapon.weaponData.NextLevelPrefab)
+            {
+                // NOTE: Should be changed later to allow for infinite upgrading
+                Debug.LogError("NO NEXT LEVEL FOR " + weapon.name);
+                return;
+            }
+            GameObject upgradedWeapon = Instantiate(weapon.weaponData.NextLevelPrefab, transform.position, Quaternion.identity);
+            upgradedWeapon.transform.SetParent(transform);  // Set weapon to be a child of the player
+            AddWeapon(slotIndex, upgradedWeapon.GetComponent<WeaponController>());
+            Destroy(weapon.gameObject);
+            weaponLevels[slotIndex] = upgradedWeapon.GetComponent<WeaponController>().weaponData.Level; // Set level of weapon
+        }
     }
 
     public void LevelUpPassiveItem(int slotIndex)
     {
-        // insert code here
+        if(passiveItemSlots.Count > slotIndex)
+        {
+            PassiveItem passiveItem = passiveItemSlots[slotIndex];
+            // Checks if current passive item has a next level
+            if (!passiveItem.passiveItemData.NextLevelPrefab)
+            {
+                // NOTE: Should be changed later to allow for infinite upgrading
+                Debug.LogError("NO NEXT LEVEL FOR " + passiveItem.name);
+                return;
+            }
+            GameObject upgradedPassiveItem = Instantiate(passiveItem.passiveItemData.NextLevelPrefab, transform.position, Quaternion.identity);
+            upgradedPassiveItem.transform.SetParent(transform);  // Set passive item to be a child of the player
+            AddPassiveItem(slotIndex, upgradedPassiveItem.GetComponent<PassiveItem>());
+            Destroy(passiveItem.gameObject);
+            passiveItemLevels[slotIndex] = upgradedPassiveItem.GetComponent<PassiveItem>().passiveItemData.Level; // Set level of passive item
+        }
     }
 }

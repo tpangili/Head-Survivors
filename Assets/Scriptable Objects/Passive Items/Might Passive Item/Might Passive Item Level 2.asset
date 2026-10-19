@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb62dee03d610344eb098a1fbb7fcd3e, type: 3}
-  m_Name: Movement Passive Item
+  m_Name: Might Passive Item Level 2
   m_EditorClassIdentifier: 
-  multiplier: 50
+  multiplier: 150
+  level: 2
+  nextLevelPrefab: {fileID: 0}

@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc4e3928b31ea2447b228fef70e1a5ea, type: 3}
-  m_Name: Garlic Weapon
+  m_Script: {fileID: 11500000, guid: eb62dee03d610344eb098a1fbb7fcd3e, type: 3}
+  m_Name: Might Passive Item
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4109971904976247242, guid: a4b9e5e6c8894074d80ed0e0c6f69955, type: 3}
-  damage: 5
-  speed: 0
-  cooldownDuration: 3
-  pierce: 0
+  multiplier: 100
+  level: 1
+  nextLevelPrefab: {fileID: 4136058470515907199, guid: 9de5e09ed1985ce49b4420170f59b084, type: 3}

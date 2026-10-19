@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 2089001064504699295}
   - component: {fileID: 4993760816439430549}
   - component: {fileID: 6103271092941630225}
+  - component: {fileID: 2218112708687123369}
   m_Layer: 7
   m_Name: Hitbox
   m_TagString: Untagged
@@ -305,7 +306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb4a8c57a8402645a179cd87425f554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 0}
   currentHealth: 0
   currentMaxHealth: 0
   currentRecovery: 0
@@ -327,6 +327,10 @@ MonoBehaviour:
   - startLevel: 4
     endLevel: 5
     experienceCapIncrease: 100
+  weaponIndex: 0
+  passiveItemIndex: 0
+  firstPassiveItemTest: {fileID: 0}
+  secondPassiveItemTest: {fileID: 0}
 --- !u!58 &6103271092941630225
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -362,6 +366,34 @@ CircleCollider2D:
   m_Offset: {x: 0.0047413856, y: -0.03318981}
   serializedVersion: 2
   m_Radius: 0.0647781
+--- !u!114 &2218112708687123369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4393493829694888142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18dc55a4992fd845b03fae7d7856b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  weaponLevels: 000000000000000000000000000000000000000000000000
+  passiveItemSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  passiveItemLevels: 000000000000000000000000000000000000000000000000
 --- !u!1 &5770146542001620097
 GameObject:
   m_ObjectHideFlags: 0

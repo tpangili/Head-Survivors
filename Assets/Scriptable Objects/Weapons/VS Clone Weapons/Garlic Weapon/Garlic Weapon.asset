@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc4e3928b31ea2447b228fef70e1a5ea, type: 3}
-  m_Name: Eyes
+  m_Name: Garlic Weapon
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2542900901095366592, guid: 684ae8cd974d6b04a9036051d0c52825, type: 3}
-  damage: 3
+  prefab: {fileID: 4109971904976247242, guid: a4b9e5e6c8894074d80ed0e0c6f69955, type: 3}
+  damage: 5
   speed: 0
-  cooldownDuration: 5
-  pierce: 10
-  head: {fileID: 21300000, guid: 8667be883f310bf4880a9e1ee7c493ea, type: 3}
-  headAction: {fileID: 21300000, guid: 8d86beb451cfcbd42a02db3123c43f5d, type: 3}
+  cooldownDuration: 3
+  pierce: 0
+  head: {fileID: 0}
+  headAction: {fileID: 0}
+  level: 1
+  nextLevelPrefab: {fileID: 330004448629392016, guid: 0117c3a55aae45a4eac3fe83c5872781, type: 3}
