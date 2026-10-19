@@ -21,3 +21,4 @@ MonoBehaviour:
   headAction: {fileID: 0}
   level: 2
   nextLevelPrefab: {fileID: 0}
+  icon: {fileID: -2413806693520163455, guid: dc9d1e43c21767e4f94b1b62bc66e0d6, type: 3}

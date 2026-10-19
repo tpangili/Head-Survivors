@@ -1,19 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
+    // Weapon Inventory
     public List<WeaponController> weaponSlots = new List<WeaponController>(6);
     public int[] weaponLevels = new int[6];
+    public List<Image> weaponUISlots = new List<Image>(6);
+
+    // Passive Item Inventory
     public List<PassiveItem> passiveItemSlots = new List<PassiveItem>(6);
     public int[] passiveItemLevels = new int[6];
+    public List<Image> passiveItemUISlots = new List<Image>(6);
 
     // Adds weapon to specific inventory slot
     public void AddWeapon(int slotIndex, WeaponController weapon)
     {
         weaponSlots[slotIndex] = weapon;
         weaponLevels[slotIndex] = weapon.weaponData.Level;
+        weaponUISlots[slotIndex].enabled = true; // enable image component
+        weaponUISlots[slotIndex].sprite = weapon.weaponData.Icon;
     }
 
     // Adds passive item to specific inventory slot
@@ -21,6 +29,8 @@ public class InventoryManager : MonoBehaviour
     {
         passiveItemSlots[slotIndex] = passiveItem;
         passiveItemLevels[slotIndex] = passiveItem.passiveItemData.Level;
+        passiveItemUISlots[slotIndex].enabled = true; // enable image component
+        passiveItemUISlots[slotIndex].sprite = passiveItem.passiveItemData.Icon;
     }
 
     public void LevelUpWeapon(int slotIndex)
