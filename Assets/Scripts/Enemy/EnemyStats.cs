@@ -59,7 +59,7 @@ public class EnemyStats : MonoBehaviour
     {
         //Debug.Log("COLLIDE");
         // Reference the script from the collided collider and deal damage using TakeDamage()
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Hitbox"))
         {
             PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
             if (!player.isInvincible)

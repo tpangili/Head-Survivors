@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 2218112708687123369}
   m_Layer: 7
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -386,6 +386,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   weaponLevels: 000000000000000000000000000000000000000000000000
+  weaponUISlots: []
   passiveItemSlots:
   - {fileID: 0}
   - {fileID: 0}
@@ -394,6 +395,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   passiveItemLevels: 000000000000000000000000000000000000000000000000
+  passiveItemUISlots: []
 --- !u!1 &5770146542001620097
 GameObject:
   m_ObjectHideFlags: 0
