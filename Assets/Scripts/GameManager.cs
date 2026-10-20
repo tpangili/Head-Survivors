@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,8 +33,9 @@ public class GameManager : MonoBehaviour
     public Text currentProjectileSpeedDisplay;
     public Text currentMagnetDisplay;
 
-    // Flag to check that game is over
+    // Flags related to game state
     public bool isGameOver = false;
+    public bool isPaused = false;
     
 
     void Awake()
@@ -60,6 +62,7 @@ public class GameManager : MonoBehaviour
         {
             case GameState.Gameplay:
                 // code for gameplay state
+                //Debug.Log("Game is game");
                 CheckForPauseAndResume();
                 break;
             case GameState.Paused:
@@ -72,7 +75,8 @@ public class GameManager : MonoBehaviour
                 {
                     isGameOver = true;
                     Time.timeScale = 0f; // Stop game entirely
-                    Debug.Log("GAME IS OVER");
+                    Cursor.visible = true;
+                    //Debug.Log("GAME IS OVER");
                     DisplayResults();
                 }
                 break;
@@ -95,7 +99,9 @@ public class GameManager : MonoBehaviour
             previousState = currentState;
             currentState = GameState.Paused;
             Time.timeScale = 0f; // stops game
+            isPaused = true;
             pauseScreen.SetActive(true);
+            Cursor.visible = true; // puts mouse back on screen
             Debug.Log("Game is paused");
         }
     }
@@ -106,8 +112,11 @@ public class GameManager : MonoBehaviour
         {
             ChangeState(previousState);
             Time.timeScale = 1f; // Resume game
+            isPaused = false;
             pauseScreen.SetActive(false);
-            Debug.Log("Game is resumed");
+            //Debug.Log("Removes mouse");
+            Cursor.visible = false; // Removes mouse cursor from screen
+            //Debug.Log("Game is resumed");
         }
     }
 
