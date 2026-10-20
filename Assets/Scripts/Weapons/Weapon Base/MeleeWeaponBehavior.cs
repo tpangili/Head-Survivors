@@ -30,7 +30,7 @@ public class MeleeWeaponBehavior : MonoBehaviour
 
     public float GetCurrentDamage()
     {
-        return currentDamage *= FindObjectOfType<PlayerStats>().currentMight;
+        return currentDamage *= FindObjectOfType<PlayerStats>().CurrentMight;
     }
     
     // Start is called before the first frame update
@@ -46,7 +46,7 @@ public class MeleeWeaponBehavior : MonoBehaviour
         {
             EnemyStats enemy = col.GetComponent<EnemyStats>();
             enemy.TakeDamage(GetCurrentDamage());
-            Debug.Log("damage");
+            //Debug.Log("damage");
             //ReducePierce();
         }
         else if(col.CompareTag("Prop"))

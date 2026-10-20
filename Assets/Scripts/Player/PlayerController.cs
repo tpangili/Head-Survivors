@@ -45,8 +45,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        // Prevents movement if game is over
+        if (GameManager.instance.isGameOver)
+        {
+            return;
+        }
+
         //Getting movement input
-        movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
         // Tracks last moved x and y directions
         // (Used for any weapon aiming based on direction of player movement)
@@ -70,62 +76,23 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Prevents movement if game is over
+        if (GameManager.instance.isGameOver)
+        {
+            return;
+        }
+        
         // Focus movement: character moves slower while shift is held
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            body.MovePosition(body.position + movementInput * (player.currentMoveSpeed/2) * Time.fixedDeltaTime);
+            body.MovePosition(body.position + movementInput * (player.CurrentMoveSpeed/2) * Time.fixedDeltaTime);
             sprite.enabled = true;  // Hitbox is visible while focusing
         }
         else
         {
             // Normal movement
-            body.MovePosition(body.position + movementInput * player.currentMoveSpeed * Time.fixedDeltaTime);
+            body.MovePosition(body.position + movementInput * player.CurrentMoveSpeed * Time.fixedDeltaTime);
             sprite.enabled = false; // Hitbox is invisible during normal movement
         }
     }
-
-    /*public void LoseHealth()
-    {
-        // Take away health
-        if (health > 0)
-        {
-            health--;
-            Debug.Log("Health: " + health);
-        }
-        // Player dies if health reaches 0
-        if (health <= 0)
-        {
-            //Destroy(gameObject);
-            Debug.Log("Game Over");
-            return;
-        }
-        // Activates invincibility frames
-        StartCoroutine(BecomeTemporarilyInvincible());
-    }
-
-    private IEnumerator BecomeTemporarilyInvincible()
-    {
-        //Debug.Log("Player turned invincible!");
-        isInvincible = true;
-
-        // Iterates through the seconds of being invincible
-        for (float i = 0; i < invinciSeconds; i += invinciTimeDelta)
-        {
-            // Makes player sprite flash during i frames
-            if (spriteBig.enabled)
-            {
-                spriteBig.enabled = false;
-            }
-            else
-            {
-                spriteBig.enabled = true;
-            }
-            yield return new WaitForSeconds(invinciTimeDelta);
-        }
-
-        // Restores default sprite state and removes invincibility
-        spriteBig.enabled = true;
-        isInvincible = false;
-        //Debug.Log("Player is no longer invincible!");
-    }*/
 }

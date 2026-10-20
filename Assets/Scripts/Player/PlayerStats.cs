@@ -8,24 +8,122 @@ public class PlayerStats : MonoBehaviour
     CharacterScriptableObject characterData;
 
     // Current player stats
-    [HideInInspector]
-    public float currentHealth;
-    [HideInInspector]
-    public float currentMaxHealth;
-    [HideInInspector]
-    public float currentRecovery;
-    [HideInInspector]
-    public float currentMoveSpeed;
-    [HideInInspector]
-    public float currentMight;
-    [HideInInspector]
-    public float currentProjectileSpeed;
-    [HideInInspector]
-    public float currentMagnet;
+    float currentHealth;
+    float currentMaxHealth;
+    float currentMoveSpeed;
+    float currentMight;
+    float currentProjectileSpeed;
+    float currentMagnet;
 
-    // Spawned Weapon
-    // NOTE: Heads equipped are classified as weapons
-    //public List<GameObject> spawnedWeapons;
+    #region Current Stats Properties
+    public float CurrentHealth
+    {
+        get { return currentHealth; }
+        set
+        {
+            // Check if the value has changed
+            if(currentHealth != value)
+            {
+                currentHealth = value;
+                if(GameManager.instance != null)
+                {
+                    GameManager.instance.currentHealthDisplay.text = "Health: " + currentHealth;
+                }
+                // add any additional logic here that needs to be executed when the value changes
+            }
+        }
+    }
+
+    public float CurrentMaxHealth
+    {
+        get { return currentMaxHealth; }
+        set
+        {
+            // Check if the value has changed
+            if(currentMaxHealth != value)
+            {
+                currentMaxHealth = value;
+                if(GameManager.instance != null)
+                {
+                    GameManager.instance.currentMaxHealthDisplay.text = "Max Health: " + currentMaxHealth;
+                }
+                // add any additional logic here that needs to be executed when the value changes
+            }
+        }
+    }
+
+    public float CurrentMoveSpeed
+    {
+        get { return currentMoveSpeed; }
+        set
+        {
+            // Check if the value has changed
+            if(currentMoveSpeed != value)
+            {
+                currentMoveSpeed = value;
+                if(GameManager.instance != null)
+                {
+                    GameManager.instance.currentMoveSpeedDisplay.text = "Move Speed: " + currentMoveSpeed;
+                }
+                // add any additional logic here that needs to be executed when the value changes
+            }
+        }
+    }
+
+    public float CurrentMight
+    {
+        get { return currentMight; }
+        set
+        {
+            // Check if the value has changed
+            if(currentMight != value)
+            {
+                currentMight = value;
+                if(GameManager.instance != null)
+                {
+                    GameManager.instance.currentMightDisplay.text = "Might: " + currentMight;
+                }
+                // add any additional logic here that needs to be executed when the value changes
+            }
+        }
+    }
+
+    public float CurrentProjectileSpeed
+    {
+        get { return currentProjectileSpeed; }
+        set
+        {
+            // Check if the value has changed
+            if(currentProjectileSpeed != value)
+            {
+                currentProjectileSpeed = value;
+                if(GameManager.instance != null)
+                {
+                    GameManager.instance.currentProjectileSpeedDisplay.text = "Projectile Speed: " + currentProjectileSpeed;
+                }
+                // add any additional logic here that needs to be executed when the value changes
+            }
+        }
+    }
+
+    public float CurrentMagnet
+    {
+        get { return currentMagnet; }
+        set
+        {
+            // Check if the value has changed
+            if(currentMagnet != value)
+            {
+                currentMagnet = value;
+                if(GameManager.instance != null)
+                {
+                    GameManager.instance.currentMagnetDisplay.text = "Magnet " + currentMagnet;
+                }
+                // add any additional logic here that needs to be executed when the value changes
+            }
+        }
+    }
+    #endregion
 
     // Invincibility frame data
     [HideInInspector]
@@ -73,15 +171,16 @@ public class PlayerStats : MonoBehaviour
         inventory = GetComponent<InventoryManager>();
 
         // Initialize starting character stats
-        currentHealth = characterData.MaxHealth;
-        currentMaxHealth = characterData.MaxHealth;
-        currentRecovery = characterData.Recovery;
-        currentMoveSpeed = characterData.MoveSpeed;
-        currentMight = characterData.Might;
-        currentProjectileSpeed = characterData.ProjectileSpeed;
+        CurrentHealth = characterData.MaxHealth;
+        CurrentMaxHealth = characterData.MaxHealth;
+        //CurrentRecovery = characterData.Recovery;
+        CurrentMoveSpeed = characterData.MoveSpeed;
+        CurrentMight = characterData.Might;
+        CurrentProjectileSpeed = characterData.ProjectileSpeed;
+        CurrentMagnet = characterData.Magnet;
+
         currentInvinciSeconds = characterData.InvinciSeconds;
-        currentInvinciTimeDelta = characterData.InvinciTimeDelta;
-        currentMagnet = characterData.Magnet;
+        currentInvinciTimeDelta = characterData.InvinciTimeDelta; // reminder: add a property for these if we add i-frame upgrades
 
         // Spawn starting weapon
         SpawnWeapon(characterData.StartingWeapon);
@@ -94,6 +193,14 @@ public class PlayerStats : MonoBehaviour
     {
         // Initialize experience cap
         experienceCap = levelRanges[0].experienceCapIncrease;
+
+        // Set current stats for UI display
+        GameManager.instance.currentHealthDisplay.text = "Health: " + currentHealth;
+        GameManager.instance.currentMaxHealthDisplay.text = "Max Health: " + currentMaxHealth;
+        GameManager.instance.currentMoveSpeedDisplay.text = "Move Speed: " + currentMoveSpeed;
+        GameManager.instance.currentMightDisplay.text = "Might: " + currentMight;
+        GameManager.instance.currentProjectileSpeedDisplay.text = "Projectile Speed: " + currentProjectileSpeed;
+        GameManager.instance.currentMagnetDisplay.text = "Magnet " + currentMagnet;
     }
 
     public void IncreaseExperience(int amount)
@@ -131,9 +238,9 @@ public class PlayerStats : MonoBehaviour
     {
         if(currentHealth > 0)
         {
-            currentHealth -= dmg;
+            CurrentHealth -= dmg;
         }
-        if(currentHealth <= 0)
+        if(CurrentHealth <= 0)
         {
             Kill();
         }
@@ -143,8 +250,10 @@ public class PlayerStats : MonoBehaviour
 
     public void Kill()
     {
-        Debug.Log("PLAYER IS DEAD");
-        return;
+        if (!GameManager.instance.isGameOver)
+        {
+            GameManager.instance.GameOver();
+        }
     }
 
     private IEnumerator BecomeTemporarilyInvincible()
@@ -175,13 +284,13 @@ public class PlayerStats : MonoBehaviour
 
     public void RestoreHealth(float amount)
     {
-        if(currentHealth < currentMaxHealth)
+        if(CurrentHealth < currentMaxHealth)
         {
-            currentHealth += amount;
+            CurrentHealth += amount;
 
-            if(currentHealth > currentMaxHealth)
+            if(CurrentHealth > CurrentMaxHealth)
             {
-                currentHealth = currentMaxHealth;
+                CurrentHealth = CurrentMaxHealth;
             }
         }
     }
