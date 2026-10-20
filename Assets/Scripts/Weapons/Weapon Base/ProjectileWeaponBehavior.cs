@@ -39,7 +39,7 @@ public class ProjectileWeaponBehavior : MonoBehaviour
         Destroy(gameObject, destroyAfterSeconds);
     }
 
-    public void DirectionChecker(Vector3 dir)
+    public void DirectionCheckerWASD(Vector3 dir)
     {
         direction = dir;
 
@@ -58,6 +58,14 @@ public class ProjectileWeaponBehavior : MonoBehaviour
 
         transform.localScale = scale;
         transform.rotation = Quaternion.Euler(rotation);  // need to convert before setting
+    }
+
+    public void DirectionCheckerMouse()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
+        Vector2 dir = (mousePos - transform.position).normalized;
+        direction = dir;
     }
 
     // Handles dealing damage to enemy

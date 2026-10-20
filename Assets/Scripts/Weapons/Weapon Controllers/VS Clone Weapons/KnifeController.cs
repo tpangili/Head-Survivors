@@ -18,6 +18,8 @@ public class KnifeController : WeaponController
         // That way it spawns from the same spot within the player
         spawnedKnife.transform.position = transform.position;
         // Reference and set direction based on player direction
-        spawnedKnife.GetComponent<KnifeBehavior>().DirectionChecker(pm.lastMovedVector);
+        //spawnedKnife.GetComponent<KnifeBehavior>().DirectionCheckerWASD(pm.lastMovedVector);
+        // Reference and set direction based on mouse direction
+        spawnedKnife.GetComponent<KnifeBehavior>().DirectionCheckerMouse();
     }
 }
