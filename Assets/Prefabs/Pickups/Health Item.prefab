@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3808804491674676190}
   - component: {fileID: 4530926110297561952}
   - component: {fileID: 8312501438706160938}
+  - component: {fileID: -8912657370068860432}
   m_Layer: 0
   m_Name: Health Item
   m_TagString: Untagged
@@ -133,4 +134,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56fbb3f6db82b994eac2722e5e51a7a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMagnetized: 0
   healthToRestore: 100
+--- !u!114 &-8912657370068860432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085980124626375334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a360ff62c026a4f96119438dfa32e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 3
+  magnitude: 0.1
+  direction: {x: 0, y: 1, z: 0}
