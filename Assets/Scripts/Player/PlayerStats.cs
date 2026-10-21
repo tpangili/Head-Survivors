@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -158,6 +160,11 @@ public class PlayerStats : MonoBehaviour
     public int weaponIndex;
     public int passiveItemIndex;
 
+    [Header("UI")]
+    public Image healthBar;
+    public Image expBar;
+    public Text levelText;
+
     //TESTING
     public GameObject firstPassiveItemTest, secondPassiveItemTest;
 
@@ -201,6 +208,10 @@ public class PlayerStats : MonoBehaviour
         GameManager.instance.currentMightDisplay.text = "Might: " + currentMight;
         GameManager.instance.currentProjectileSpeedDisplay.text = "Projectile Speed: " + currentProjectileSpeed;
         GameManager.instance.currentMagnetDisplay.text = "Magnet " + currentMagnet;
+        
+        UpdateHealthBar();
+        UpdateExpBar();
+        UpdateLevelText();
     }
 
     public void IncreaseExperience(int amount)
@@ -208,6 +219,8 @@ public class PlayerStats : MonoBehaviour
         experience += amount;
 
         LevelUpChecker();
+
+        UpdateExpBar();
     }
 
     void LevelUpChecker()
@@ -232,8 +245,21 @@ public class PlayerStats : MonoBehaviour
             }
             experienceCap += experienceCapIncrease;
 
+            UpdateLevelText();
+
             GameManager.instance.StartLevelUp();
         }
+    }
+
+    void UpdateExpBar()
+    {
+        // Update exp bar fill amount
+        expBar.fillAmount = (float)experience / experienceCap;
+    }
+
+    void UpdateLevelText()
+    {
+        levelText.text = "LV " + level.ToString();
     }
 
     public void TakeDamage(float dmg)
@@ -246,8 +272,16 @@ public class PlayerStats : MonoBehaviour
         {
             Kill();
         }
+
+        UpdateHealthBar();
         // Activates invincibility frames
         StartCoroutine(BecomeTemporarilyInvincible());
+    }
+
+    void UpdateHealthBar()
+    {
+        // Update the health bar
+        healthBar.fillAmount = currentHealth / currentMaxHealth;
     }
 
     public void Kill()
