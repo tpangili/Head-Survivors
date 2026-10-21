@@ -178,7 +178,7 @@ MonoBehaviour:
   drops:
   - name: Blue Exp
     itemPrefab: {fileID: 3111728068395767218, guid: f9470e09d76138e4d96f070790dacb20, type: 3}
-    dropRate: 50
+    dropRate: 100
 --- !u!50 &-6032571724904980546
 Rigidbody2D:
   serializedVersion: 4

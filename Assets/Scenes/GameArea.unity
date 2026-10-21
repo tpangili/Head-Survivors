@@ -6276,7 +6276,7 @@ PrefabInstance:
       objectReference: {fileID: 510729101}
     - target: {fileID: 2218112708687123369, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: weaponUpgradeOptions.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2218112708687123369, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: passiveItemUISlots.Array.data[0]
@@ -6379,6 +6379,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1425006436}
     - target: {fileID: 2218112708687123369, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: weaponUpgradeOptions.Array.data[1].weaponUpgradeIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218112708687123369, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: weaponUpgradeOptions.Array.data[2].weaponUpgradeIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218112708687123369, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: passiveItemUpgradeOptions.Array.data[0].passiveItemData
       value: 
       objectReference: {fileID: 11400000, guid: 83560735a7cabf54d9f0b0d845b6fe20, type: 2}
@@ -6410,6 +6418,10 @@ PrefabInstance:
       propertyPath: passiveItemUpgradeOptions.Array.data[1].initialPassiveItem
       value: 
       objectReference: {fileID: 4136058470515907199, guid: 6fae34a5a2e168a4f822b1d97dae2d45, type: 3}
+    - target: {fileID: 2218112708687123369, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: passiveItemUpgradeOptions.Array.data[1].passiveItemUpgradeIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2723074599770436212, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: m_SortingOrder
       value: 20
