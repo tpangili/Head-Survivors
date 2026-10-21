@@ -34,6 +34,7 @@ public class EnemySpawner : MonoBehaviour
     public int maxEnemiesAllowed; // Maximum number of enemies allowed on the map at once
     public bool maxEnemiesReached = false;
     public float waveInterval; // Interval between each wave
+    bool isWaveActive = false;
 
     [Header("Spawn Positions")]
     public List<Transform> relativeSpawnPoints; // List of all relative spawn points for enemies
@@ -51,7 +52,7 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         // Checks if wave has ended and next wave should start
-        if(currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0)
+        if(currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0 && !isWaveActive)
         {
             StartCoroutine(BeginNextWave());
         }
@@ -67,6 +68,8 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator BeginNextWave()
     {
+        isWaveActive = true;
+
         // Wave happens for "waveInterval" seconds before starting next wave
         yield return new WaitForSeconds(waveInterval);
         //Debug.Log("wave interval done");
@@ -74,6 +77,7 @@ public class EnemySpawner : MonoBehaviour
         // If there are more waves after the current wave, start the next one
         if(currentWaveCount < waves.Count - 1)
         {
+            isWaveActive = false;
             currentWaveCount++;
             //Debug.Log(currentWaveCount);
             CalculateWaveQuota();
@@ -107,13 +111,6 @@ public class EnemySpawner : MonoBehaviour
                 // Check if the minimum number of enemies of this type have been spawned
                 if(enemyGroup.spawnCount < enemyGroup.enemyCount)
                 {
-                    // Limits number of enemies that can be spawned at once
-                    if(enemiesAlive >= maxEnemiesAllowed)
-                    {
-                        maxEnemiesReached = true;
-                        return;
-                    }
-
                     Instantiate(enemyGroup.enemyPrefab, player.position + relativeSpawnPoints[UnityEngine.Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
                     
                     /*Vector2 spawnPosition = new Vector2(player.transform.position.x + UnityEngine.Random.Range(-10f, 10f), player.transform.position.y + UnityEngine.Random.Range(-10f, 10f));
@@ -122,14 +119,15 @@ public class EnemySpawner : MonoBehaviour
                     enemyGroup.spawnCount++;
                     waves[currentWaveCount].spawnCount++;
                     enemiesAlive++;
+
+                    // Limits number of enemies that can be spawned at once
+                    if(enemiesAlive >= maxEnemiesAllowed)
+                    {
+                        maxEnemiesReached = true;
+                        return;
+                    }
                 }
             }
-        }
-
-        // Checks if number of enemies has fallen below maximum
-        if(enemiesAlive < maxEnemiesAllowed)
-        {
-            maxEnemiesReached = false;
         }
     }
 
@@ -137,5 +135,10 @@ public class EnemySpawner : MonoBehaviour
     public void OnEnemyKilled()
     {
         enemiesAlive--;
+        // Checks if number of enemies has fallen below maximum
+        if(enemiesAlive < maxEnemiesAllowed)
+        {
+            maxEnemiesReached = false;
+        }
     }
 }

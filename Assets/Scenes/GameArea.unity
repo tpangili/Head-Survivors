@@ -3229,6 +3229,45 @@ MonoBehaviour:
     waveQuota: 0
     spawnInterval: 1
     spawnCount: 0
+  - waveName: Wave 2
+    enemyGroups:
+    - enemyName: Bat
+      enemyCount: 8
+      spawnCount: 0
+      enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
+    - enemyName: Red Bat
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 3
+    enemyGroups:
+    - enemyName: Bat
+      enemyCount: 8
+      spawnCount: 0
+      enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
+    - enemyName: Red Bat
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 4
+    enemyGroups:
+    - enemyName: Bat
+      enemyCount: 8
+      spawnCount: 0
+      enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
+    - enemyName: Red Bat
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
   maxEnemiesAllowed: 4
