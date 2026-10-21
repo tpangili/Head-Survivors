@@ -21,4 +21,6 @@ MonoBehaviour:
   headAction: {fileID: 0}
   level: 2
   nextLevelPrefab: {fileID: 0}
+  name: Knife Level 2
+  description: Speed is increased by 5
   icon: {fileID: 7482667652216324306, guid: 0a953e0fd92fdb5439d7c31a7c18d2ce, type: 3}

@@ -21,4 +21,6 @@ MonoBehaviour:
   headAction: {fileID: 21300000, guid: 8d86beb451cfcbd42a02db3123c43f5d, type: 3}
   level: 2
   nextLevelPrefab: {fileID: 0}
+  name: Eye Head Level 2
+  description: Cooldown reduced by .5
   icon: {fileID: 21300000, guid: 8667be883f310bf4880a9e1ee7c493ea, type: 3}

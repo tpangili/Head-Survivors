@@ -15,4 +15,6 @@ MonoBehaviour:
   multiplier: 150
   level: 2
   nextLevelPrefab: {fileID: 0}
+  name: Might Level 2
+  description: Increases damage dealt by 150%
   icon: {fileID: 2747690628134850419, guid: 5bcc3060202263e4fb4db0055e75697c, type: 3}
