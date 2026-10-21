@@ -42,8 +42,8 @@ public class InventoryManager : MonoBehaviour
         public Button upgradeButton;
     }
 
-    public List<WeaponUpgrade> weaponUpgradeOptions = new List<WeaponUpgrade>(); // list of upgrade options for weapons
-    public List<PassiveItemUpgrade> passiveItemUpgradeOptions = new List<PassiveItemUpgrade>(); // list of upgrade options for passive items
+    public List<WeaponUpgrade> weaponUpgradeOptions = new List<WeaponUpgrade>(); // list of upgrade options for weapons on level up screen
+    public List<PassiveItemUpgrade> passiveItemUpgradeOptions = new List<PassiveItemUpgrade>(); // list of upgrade options for passive items on level up screen
     public List<UpgradeUI> upgradeUIOptions = new List<UpgradeUI>();    // list of ui for upgrade options present in the scene
 
     PlayerStats player;
@@ -81,6 +81,20 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public int CheckInventory(WeaponController head)
+    {
+        int slotIndex = 99;
+        for(int i = 0; i < weaponSlots.Count; i++)
+        {
+            if(weaponSlots[i] != null && weaponSlots[i].weaponData == head.weaponData)
+            {
+                slotIndex = i;
+                break;
+            }
+        }
+        return slotIndex;
+    }
+
     public void LevelUpWeapon(int slotIndex, int upgradeIndex)
     {
         if(weaponSlots.Count > slotIndex)
@@ -99,7 +113,11 @@ public class InventoryManager : MonoBehaviour
             Destroy(weapon.gameObject);
             weaponLevels[slotIndex] = upgradedWeapon.GetComponent<WeaponController>().weaponData.Level; // Set level of weapon
 
-            weaponUpgradeOptions[upgradeIndex].weaponData = upgradedWeapon.GetComponent<WeaponController>().weaponData;
+            // Checks if a head is being upgraded
+            if(upgradeIndex != 99)
+            {
+                weaponUpgradeOptions[upgradeIndex].weaponData = upgradedWeapon.GetComponent<WeaponController>().weaponData;
+            }
 
             if(GameManager.instance != null && GameManager.instance.choosingUpgrade)
             {
