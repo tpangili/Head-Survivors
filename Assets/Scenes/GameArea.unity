@@ -3270,7 +3270,7 @@ MonoBehaviour:
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 4
+  maxEnemiesAllowed: 10
   maxEnemiesReached: 0
   waveInterval: 3
   relativeSpawnPoints:
@@ -6808,6 +6808,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain Chunk
       objectReference: {fileID: 0}
+    - target: {fileID: 6182779203000747300, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182779203000747300, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
+      propertyPath: propPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182779203000747300, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
+      propertyPath: propPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8513347538897177703, guid: c3adc2a89d7a5434fa6bd9d8989e3a0b, type: 3}
+    - target: {fileID: 6182779203000747300, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
+      propertyPath: propSpawnPoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182779203000747300, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
+      propertyPath: propSpawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 7871803067194312044}
+    - target: {fileID: 6182779203000747300, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
+      propertyPath: propSpawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 7871803067194312043}
+    - target: {fileID: 6182779203000747300, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
+      propertyPath: propSpawnPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 7871803067194312042}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6816,6 +6844,21 @@ PrefabInstance:
 --- !u!4 &7871803067194312041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3994880634624716934, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
+  m_PrefabInstance: {fileID: 7871803067194312040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7871803067194312042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1782072280461007932, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
+  m_PrefabInstance: {fileID: 7871803067194312040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7871803067194312043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8811410323483637584, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
+  m_PrefabInstance: {fileID: 7871803067194312040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7871803067194312044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4067484408043808519, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
   m_PrefabInstance: {fileID: 7871803067194312040}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
