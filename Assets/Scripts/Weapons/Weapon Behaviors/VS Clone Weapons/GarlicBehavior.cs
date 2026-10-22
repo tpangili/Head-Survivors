@@ -18,7 +18,7 @@ public class GarlicBehavior : MeleeWeaponBehavior
         if(col.CompareTag("Enemy") && !markedEnemies.Contains(col.gameObject))
         {
             EnemyStats enemy = col.GetComponent<EnemyStats>();
-            enemy.TakeDamage(GetCurrentDamage());
+            enemy.TakeDamage(GetCurrentDamage(), transform.position);
 
             // Mark enemy so it doesn't take continuous damage
             markedEnemies.Add(col.gameObject);
