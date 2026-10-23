@@ -242,13 +242,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5161832735144721361}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87258c69d8508f142b08486db2fccad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propSpawnPoints: []
-  propPrefabs: []
+  propSpawnPoints:
+  - {fileID: 1782072280461007932}
+  propPrefabs:
+  - {fileID: 8513347538897177703, guid: c3adc2a89d7a5434fa6bd9d8989e3a0b, type: 3}
 --- !u!1 &7782855960873256136
 GameObject:
   m_ObjectHideFlags: 0

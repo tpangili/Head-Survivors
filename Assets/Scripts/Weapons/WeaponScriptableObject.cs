@@ -55,4 +55,8 @@ public class WeaponScriptableObject : ScriptableObject
     [SerializeField]
     Sprite icon;    // not meant to be modified in game [only in editor]
     public Sprite Icon { get => icon; private set => icon = value; }
+
+    [SerializeField]
+    GameObject initialHead;
+    public GameObject InitialHead { get => initialHead; private set => initialHead = value; }
 }

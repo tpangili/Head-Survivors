@@ -86,7 +86,7 @@ public class InventoryManager : MonoBehaviour
         int slotIndex = 99;
         for(int i = 0; i < weaponSlots.Count; i++)
         {
-            if(weaponSlots[i] != null && weaponSlots[i].weaponData == head.weaponData)
+            if(weaponSlots[i] != null && weaponSlots[i].weaponData.InitialHead == head.weaponData.InitialHead)
             {
                 slotIndex = i;
                 break;
