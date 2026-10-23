@@ -5,12 +5,27 @@ using UnityEngine;
 
 public class EyeController : WeaponController
 {
+    public float headTimer = 30;
+
     [HideInInspector]
     public float theta = 0;
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+
+        headTimer -= Time.deltaTime;
+
+        if(headTimer <= 0)
+        {
+            // NOTE: add functionality to remove head and its level from inventory
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()

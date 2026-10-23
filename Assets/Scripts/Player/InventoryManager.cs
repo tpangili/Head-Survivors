@@ -95,6 +95,8 @@ public class InventoryManager : MonoBehaviour
         return slotIndex;
     }
 
+    //public int RemoveWeapon(WeaponController head){}
+
     public void LevelUpWeapon(int slotIndex, int upgradeIndex)
     {
         if(weaponSlots.Count > slotIndex)

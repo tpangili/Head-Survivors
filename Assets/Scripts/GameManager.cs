@@ -245,7 +245,7 @@ public class GameManager : MonoBehaviour
         WaitForEndOfFrame w = new WaitForEndOfFrame();
         float t = 0;
         float yOffset = 0;
-        while(t < duration)
+        while(t < duration && target != null)
         {
             // Wait for a frame and update the time
             yield return w;
