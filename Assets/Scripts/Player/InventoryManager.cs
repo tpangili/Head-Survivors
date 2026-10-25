@@ -9,7 +9,7 @@ public class InventoryManager : MonoBehaviour
 {
     // Weapon Inventory
     public List<WeaponController> weaponSlots = new List<WeaponController>(6);
-    public int[] weaponLevels = new int[6];
+    public List<int> weaponLevels = new List<int>(6);
     public List<Image> weaponUISlots = new List<Image>(6);
 
     // Passive Item Inventory
@@ -95,7 +95,22 @@ public class InventoryManager : MonoBehaviour
         return slotIndex;
     }
 
-    //public int RemoveWeapon(WeaponController head){}
+    public void RemoveWeapon(WeaponController head)
+    {
+        for(int i = 0; i < weaponSlots.Count; i++)
+        {
+            if(weaponSlots[i] != null && weaponSlots[i].weaponData.InitialHead == head.weaponData.InitialHead)
+            {
+                weaponSlots.RemoveAt(i);
+                weaponLevels.RemoveAt(i);
+                weaponUISlots[i].enabled = false;
+                //weaponUISlots[i].sprite = null;
+                player.weaponIndex--;
+                Destroy(head.gameObject);
+                break;
+            }
+        }
+    }
 
     public void LevelUpWeapon(int slotIndex, int upgradeIndex)
     {

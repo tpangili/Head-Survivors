@@ -236,7 +236,7 @@ public class GameManager : MonoBehaviour
         rect.position = referenceCamera.WorldToScreenPoint(target.position);
 
         // Make sure this is destroyed after the duration finishes
-        Destroy(textObj, duration);
+        //Destroy(textObj, duration);
 
         // Parent the generated text object to the canvas
         textObj.transform.SetParent(instance.damageTextCanvas.transform);
@@ -261,6 +261,7 @@ public class GameManager : MonoBehaviour
                 rect.position = referenceCamera.WorldToScreenPoint(target.position + new Vector3(0, yOffset));
             }
         }
+        Destroy(textObj);
     }
     
     public static void GenerateFloatingText(string text, Transform target, float duration = 1f, float speed = 1f)

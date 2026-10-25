@@ -6,6 +6,7 @@ using UnityEngine;
 public class EyeController : WeaponController
 {
     public float headTimer = 30;
+    InventoryManager inventory;
 
     [HideInInspector]
     public float theta = 0;
@@ -13,6 +14,7 @@ public class EyeController : WeaponController
     protected override void Start()
     {
         base.Start();
+        inventory = FindObjectOfType<InventoryManager>();
     }
 
     protected override void Update()
@@ -23,8 +25,9 @@ public class EyeController : WeaponController
 
         if(headTimer <= 0)
         {
-            // NOTE: add functionality to remove head and its level from inventory
-            Destroy(gameObject);
+            // Removes head from inventory and destroys it
+            inventory.RemoveWeapon(this);
+            //Destroy(gameObject);
         }
     }
 
