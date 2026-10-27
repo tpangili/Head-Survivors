@@ -5,8 +5,8 @@ using UnityEngine;
 public class HeadController : WeaponController
 {
     [Header("Head Timer Info")]
-    public float currentHeadTimer = 20;
-    public float headTimerLow = 5;
+    public float currentHeadTimer;
+    public float headTimerLow;
     
     InventoryManager inventory;
 
@@ -28,7 +28,11 @@ public class HeadController : WeaponController
         inventory = FindObjectOfType<InventoryManager>();
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
-        currentHeadTimer = weaponData.HeadTimer;
+        // Checks if the head timer was set in level up
+        if(currentHeadTimer <= weaponData.HeadTimer)
+        {
+            currentHeadTimer = weaponData.HeadTimer;
+        }
         headTimerLow = weaponData.HeadTimerLow;
     }
 

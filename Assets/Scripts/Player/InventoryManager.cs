@@ -154,18 +154,46 @@ public class InventoryManager : MonoBehaviour
         if(weaponSlots.Count > slotIndex)
         {
             WeaponController weapon = weaponSlots[slotIndex];
+            HeadController head;
+            float lastHeadTime = 0;
+
             // Checks if current weapon has a next level
             if (!weapon.weaponData.NextLevelPrefab)
             {
+                // Adds time to head timer if head level is maxed out
+                if(upgradeIndex == 99)
+                {
+                    head = weapon.GetComponent<HeadController>();
+                    head.currentHeadTimer += 20;
+                    return;
+                }
                 // NOTE: Should be changed later to allow for infinite upgrading
                 Debug.LogError("NO NEXT LEVEL FOR " + weapon.name);
                 return;
             }
+            // Initializes variables if weapon is a head
+            if(upgradeIndex == 99)
+            {
+                head = weapon.GetComponent<HeadController>();
+                lastHeadTime = head.currentHeadTimer;
+            }
+            
             GameObject upgradedWeapon = Instantiate(weapon.weaponData.NextLevelPrefab, transform.position, Quaternion.identity);
             upgradedWeapon.transform.SetParent(transform);  // Set weapon to be a child of the player
             AddWeapon(slotIndex, upgradedWeapon.GetComponent<WeaponController>());
             Destroy(weapon.gameObject);
             weaponLevels[slotIndex] = upgradedWeapon.GetComponent<WeaponController>().weaponData.Level; // Set level of weapon
+
+            // Checks if current head's timer is greater than the leveled up head's default timer
+            if(upgradeIndex == 99)
+            {
+                HeadController levelUpHead = weaponSlots[slotIndex].GetComponent<HeadController>();
+                if(lastHeadTime >= levelUpHead.currentHeadTimer)
+                {
+                        levelUpHead.currentHeadTimer = lastHeadTime + 10;
+                }
+            }
+            
 
             // Checks if a head is being upgraded
             if(upgradeIndex != 99)
