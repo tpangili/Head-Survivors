@@ -17,13 +17,13 @@ MonoBehaviour:
   speed: 0
   cooldownDuration: 3
   pierce: 10
-  head: {fileID: 21300000, guid: 8667be883f310bf4880a9e1ee7c493ea, type: 3}
-  headAction: {fileID: 21300000, guid: 8d86beb451cfcbd42a02db3123c43f5d, type: 3}
+  head: {fileID: 21300000, guid: 4b60070811ce28042af8d18f4395a446, type: 3}
+  headAction: {fileID: 21300000, guid: e1427c949b598cf42bd013bf66bc9090, type: 3}
   level: 3
   nextLevelPrefab: {fileID: 0}
   name: Eye Head Level 2
   description: Cooldown reduced by .5
-  icon: {fileID: 21300000, guid: 8667be883f310bf4880a9e1ee7c493ea, type: 3}
+  icon: {fileID: 21300000, guid: 6cd523b25f4723747aef5b2b76246548, type: 3}
   initialHead: {fileID: 6385710107871710930, guid: b333b13af819be940b1d592b20a2d48e, type: 3}
   headTimer: 40
   headTimerLow: 10

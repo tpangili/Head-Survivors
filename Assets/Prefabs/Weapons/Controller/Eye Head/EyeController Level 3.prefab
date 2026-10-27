@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -538332263
   m_SortingLayer: 3
   m_SortingOrder: 21
-  m_Sprite: {fileID: 21300000, guid: 8667be883f310bf4880a9e1ee7c493ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4b60070811ce28042af8d18f4395a446, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 231f719e774d4ec49a65171f1a681a29, type: 2}
-  restSprite: {fileID: 21300000, guid: 8667be883f310bf4880a9e1ee7c493ea, type: 3}
-  attackSprite: {fileID: 21300000, guid: 8d86beb451cfcbd42a02db3123c43f5d, type: 3}
+  weaponIndex: 0
+  restSprite: {fileID: 21300000, guid: 4b60070811ce28042af8d18f4395a446, type: 3}
+  attackSprite: {fileID: 21300000, guid: e1427c949b598cf42bd013bf66bc9090, type: 3}
   headDisplay: {fileID: 8815310142094340696}
+  currentHeadTimer: 20
+  headTimerLow: 5
+  deathFadeTime: 0.6
   theta: 0
