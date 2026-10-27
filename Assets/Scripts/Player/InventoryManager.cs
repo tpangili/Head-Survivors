@@ -88,6 +88,21 @@ public class InventoryManager : MonoBehaviour
         HeadTimerDisplays[slotIndex].text = seconds.ToString();
     }
 
+    // Used when head timer restore item is picked up by player
+    public void RestoreHeadTimers(int headToRestore)
+    {
+        // Iterates through weapons starting from 1
+        // to skip first non-head default weapon
+        for(int i = 1; i < weaponSlots.Count; i++)
+        {
+            if(weaponSlots[i] != null)
+            {
+                HeadController head = weaponSlots[i].GetComponent<HeadController>();
+                head.currentHeadTimer += headToRestore;
+            }
+        }
+    }
+
     // Adds passive item to specific inventory slot
     public void AddPassiveItem(int slotIndex, PassiveItem passiveItem)
     {

@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMagnetized: 0
-  healthToRestore: 100
+  healthToRestore: 20
 --- !u!114 &-8912657370068860432
 MonoBehaviour:
   m_ObjectHideFlags: 0

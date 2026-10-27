@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMagnetized: 0
-  experienceGranted: 30
+  experienceGranted: 20
 --- !u!50 &2384400706778685020
 Rigidbody2D:
   serializedVersion: 4
