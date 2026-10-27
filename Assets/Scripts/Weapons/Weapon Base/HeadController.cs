@@ -38,8 +38,8 @@ public class HeadController : WeaponController
         base.Update();
 
         currentHeadTimer -= Time.deltaTime;
-        // NOTE: create this function in InventoryManager.cs
-        //inventory.UpdateHeadTimerDisplay(currentHeadTimer, weaponIndex);
+        // Displays in inventory how much time is left
+        inventory.UpdateHeadTimerDisplay(currentHeadTimer, weaponIndex);
 
         // Head flashes red if timer is low
         if(currentHeadTimer <= headTimerLow && !isFlashing && !finishedFlash)

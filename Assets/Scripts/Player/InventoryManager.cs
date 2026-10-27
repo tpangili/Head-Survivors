@@ -11,6 +11,7 @@ public class InventoryManager : MonoBehaviour
     public List<WeaponController> weaponSlots = new List<WeaponController>(6);
     public List<int> weaponLevels = new List<int>(6);
     public List<Image> weaponUISlots = new List<Image>(6);
+    public List<Text> HeadTimerDisplays = new List<Text>(6); // UI displays for head timers
 
     // Passive Item Inventory
     public List<PassiveItem> passiveItemSlots = new List<PassiveItem>(6);
@@ -57,14 +58,34 @@ public class InventoryManager : MonoBehaviour
     public void AddWeapon(int slotIndex, WeaponController weapon)
     {
         weaponSlots[slotIndex] = weapon;
+        weaponSlots[slotIndex].weaponIndex = slotIndex;     // used for head timer ui
         weaponLevels[slotIndex] = weapon.weaponData.Level;
         weaponUISlots[slotIndex].enabled = true; // enable image component
         weaponUISlots[slotIndex].sprite = weapon.weaponData.Icon;
+
+        // Enables head timer display if weapon is a head
+        if(slotIndex >= 1)
+        {
+            HeadTimerDisplays[slotIndex].enabled = true;
+        }
 
         if(GameManager.instance != null && GameManager.instance.choosingUpgrade)
         {
             GameManager.instance.EndLevelUp();
         }
+    }
+
+    public void UpdateHeadTimerDisplay(float currentHeadTimer, int slotIndex)
+    {
+        // Rounds down head timer
+        int seconds = Mathf.FloorToInt(currentHeadTimer);
+        // Makes sure seconds display is never negative
+        if(seconds <= 0)
+        {
+            seconds = 0;
+        }
+        // Displays how much is left on head timer
+        HeadTimerDisplays[slotIndex].text = seconds.ToString();
     }
 
     // Adds passive item to specific inventory slot
@@ -104,6 +125,7 @@ public class InventoryManager : MonoBehaviour
                 weaponSlots.RemoveAt(i);
                 weaponLevels.RemoveAt(i);
                 weaponUISlots[i].enabled = false;
+                HeadTimerDisplays[i].enabled = false;
                 //weaponUISlots[i].sprite = null;
                 player.weaponIndex--;
                 Destroy(head.gameObject);

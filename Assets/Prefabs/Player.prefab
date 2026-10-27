@@ -501,6 +501,8 @@ MonoBehaviour:
   weaponIndex: 0
   passiveItemIndex: 0
   healthBar: {fileID: 1108970890921963541}
+  expBar: {fileID: 0}
+  levelText: {fileID: 0}
   firstPassiveItemTest: {fileID: 7460736754103950151, guid: 0d0f94dacda45384aaef83244a6c71d7, type: 3}
   secondPassiveItemTest: {fileID: 4136058470515907199, guid: 6fae34a5a2e168a4f822b1d97dae2d45, type: 3}
 --- !u!58 &6103271092941630225
@@ -559,6 +561,13 @@ MonoBehaviour:
   - {fileID: 0}
   weaponLevels: 000000000000000000000000000000000000000000000000
   weaponUISlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  HeadTimerDisplays:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
