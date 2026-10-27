@@ -7,6 +7,7 @@ using UnityEngine;
 public class EnemyStats : MonoBehaviour
 {
     public EnemyScriptableObject enemyData;
+    EnemySpawner spawner;
 
     // Current stats
     [HideInInspector]
@@ -45,6 +46,7 @@ public class EnemyStats : MonoBehaviour
         originalColor = sr.color;
 
         movement = GetComponent<EnemyMovement>();
+        spawner = FindObjectOfType<EnemySpawner>();
     }
 
     void Update()
@@ -116,6 +118,7 @@ public class EnemyStats : MonoBehaviour
             // Set the color for this frame
             sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, (1 - t / deathFadeTime) * origAlpha);
         }
+        spawner.OnEnemyKilled();
 
         //Debug.Log("enemy about to be destroyed");
         Destroy(gameObject);

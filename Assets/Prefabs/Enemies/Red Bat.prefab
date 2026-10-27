@@ -158,11 +158,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 824e990f5f0b2ff48a41873608936c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 0f527cbed7108564089ef8c3b6dd1905, type: 2}
+  enemyData: {fileID: 11400000, guid: aee3855c86542c743bbc3d1f8f314922, type: 2}
   currentMoveSpeed: 0
   currentHealth: 0
   currentDamage: 0
   despawnDistance: 20
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.2
+  deathFadeTime: 0.6
 --- !u!114 &4146914079109591997
 MonoBehaviour:
   m_ObjectHideFlags: 0
