@@ -3616,7 +3616,8 @@ MonoBehaviour:
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 10
+  maxEnemiesAllowed: 3
+  maxEnemyIncrease: 2
   maxEnemiesReached: 0
   waveInterval: 3
   relativeSpawnPoints:

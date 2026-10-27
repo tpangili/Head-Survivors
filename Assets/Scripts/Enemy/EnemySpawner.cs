@@ -32,6 +32,7 @@ public class EnemySpawner : MonoBehaviour
     float spawnTimer; // Determines when to spawn next enemy
     public int enemiesAlive;
     public int maxEnemiesAllowed; // Maximum number of enemies allowed on the map at once
+    public int maxEnemyIncrease; // How much to increase max enemies after each wave
     public bool maxEnemiesReached = false;
     public float waveInterval; // Interval between each wave
     bool isWaveActive = false;
@@ -79,6 +80,7 @@ public class EnemySpawner : MonoBehaviour
         {
             isWaveActive = false;
             currentWaveCount++;
+            maxEnemiesAllowed += maxEnemyIncrease; // increases the max enemies allowed
             //Debug.Log(currentWaveCount);
             CalculateWaveQuota();
         }

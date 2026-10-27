@@ -48,6 +48,15 @@ public class HeadController : WeaponController
             StartCoroutine(FlashRed());
         }
 
+        // Stops head from flashing red if timer is restored
+        if(currentHeadTimer > headTimerLow)
+        {
+            StopCoroutine(FlashRed());
+            isFlashing = false;
+            finishedFlash = false;
+            sr.color = originalColor;
+        }
+
         if(currentHeadTimer <= 0 && !isFlashing)
         {
             // Removes head from inventory and destroys it
