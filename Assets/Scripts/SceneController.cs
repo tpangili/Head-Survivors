@@ -15,4 +15,10 @@ public class SceneController : MonoBehaviour
         }
         Time.timeScale = 1;
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game is quitting");
+    }
 }
