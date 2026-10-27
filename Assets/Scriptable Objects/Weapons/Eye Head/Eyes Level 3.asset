@@ -25,3 +25,5 @@ MonoBehaviour:
   description: Cooldown reduced by .5
   icon: {fileID: 21300000, guid: 8667be883f310bf4880a9e1ee7c493ea, type: 3}
   initialHead: {fileID: 6385710107871710930, guid: b333b13af819be940b1d592b20a2d48e, type: 3}
+  headTimer: 40
+  headTimerLow: 10

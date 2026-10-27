@@ -59,4 +59,12 @@ public class WeaponScriptableObject : ScriptableObject
     [SerializeField]
     GameObject initialHead;
     public GameObject InitialHead { get => initialHead; private set => initialHead = value; }
+
+    [SerializeField]
+    int headTimer;
+    public int HeadTimer { get => headTimer; private set => headTimer = value; }
+
+    [SerializeField]
+    int headTimerLow;
+    public int HeadTimerLow { get => headTimerLow; private set => headTimerLow = value; }
 }

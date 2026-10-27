@@ -5,8 +5,8 @@ using UnityEngine;
 public class HeadController : WeaponController
 {
     [Header("Head Timer Info")]
-    public float headTimer = 30;
-    public float headTimerLow = 10;
+    public float currentHeadTimer = 20;
+    public float headTimerLow = 5;
     
     InventoryManager inventory;
 
@@ -28,6 +28,8 @@ public class HeadController : WeaponController
         inventory = FindObjectOfType<InventoryManager>();
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
+        currentHeadTimer = weaponData.HeadTimer;
+        headTimerLow = weaponData.HeadTimerLow;
     }
 
     // Update is called once per frame
@@ -35,16 +37,18 @@ public class HeadController : WeaponController
     {
         base.Update();
 
-        headTimer -= Time.deltaTime;
+        currentHeadTimer -= Time.deltaTime;
+        // NOTE: create this function in InventoryManager.cs
+        //inventory.UpdateHeadTimerDisplay(currentHeadTimer, weaponIndex);
 
         // Head flashes red if timer is low
-        if(headTimer <= headTimerLow && !isFlashing && !finishedFlash)
+        if(currentHeadTimer <= headTimerLow && !isFlashing && !finishedFlash)
         {
             isFlashing = true;
             StartCoroutine(FlashRed());
         }
 
-        if(headTimer <= 0 && !isFlashing)
+        if(currentHeadTimer <= 0 && !isFlashing)
         {
             // Removes head from inventory and destroys it
             StartCoroutine(KillFade());
