@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb62dee03d610344eb098a1fbb7fcd3e, type: 3}
   m_Name: Might Passive Item
   m_EditorClassIdentifier: 
-  multiplier: 100
+  multiplier: 20
   level: 1
   nextLevelPrefab: {fileID: 4136058470515907199, guid: 9de5e09ed1985ce49b4420170f59b084, type: 3}
   name: Might
-  description: Increases damage dealt by 100%
+  description: Increases damage dealt by 20%
   icon: {fileID: 2747690628134850419, guid: 5bcc3060202263e4fb4db0055e75697c, type: 3}

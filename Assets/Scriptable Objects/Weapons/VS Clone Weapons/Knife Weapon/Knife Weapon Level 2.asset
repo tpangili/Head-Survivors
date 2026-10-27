@@ -15,7 +15,7 @@ MonoBehaviour:
   prefab: {fileID: 2542900901095366592, guid: e437b901d8328484796ad0ab3bd0208a, type: 3}
   damage: 5
   speed: 15
-  cooldownDuration: 2
+  cooldownDuration: 1
   pierce: 1
   head: {fileID: 0}
   headAction: {fileID: 0}
@@ -24,3 +24,6 @@ MonoBehaviour:
   name: Knife Level 2
   description: Speed is increased by 5
   icon: {fileID: 7482667652216324306, guid: 0a953e0fd92fdb5439d7c31a7c18d2ce, type: 3}
+  initialHead: {fileID: 0}
+  headTimer: 0
+  headTimerLow: 0
