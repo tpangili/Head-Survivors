@@ -144,7 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8300c0f6c4dc80b448ef8e1cc23677f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 5
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.2
+  deathFadeTime: 0.6
 --- !u!114 &-457752173980200625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,4 +163,10 @@ MonoBehaviour:
   drops:
   - name: Health
     itemPrefab: {fileID: 5085980124626375334, guid: 5f5ca74ff304ee042b60465214e2642c, type: 3}
-    dropRate: 50
+    dropRate: 100
+  - name: Eye Head
+    itemPrefab: {fileID: 5085980124626375334, guid: 7d4c2846e1493594e8491f90deb14b48, type: 3}
+    dropRate: 70
+  - name: Head Restore
+    itemPrefab: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
+    dropRate: 80

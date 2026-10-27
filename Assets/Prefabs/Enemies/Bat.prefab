@@ -163,6 +163,9 @@ MonoBehaviour:
   currentHealth: 0
   currentDamage: 0
   despawnDistance: 20
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.2
+  deathFadeTime: 0.6
 --- !u!114 &4146914079109591997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +182,9 @@ MonoBehaviour:
   - name: Blue Exp
     itemPrefab: {fileID: 3111728068395767218, guid: f9470e09d76138e4d96f070790dacb20, type: 3}
     dropRate: 100
+  - name: Head Restore
+    itemPrefab: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
+    dropRate: 50
 --- !u!50 &-6032571724904980546
 Rigidbody2D:
   serializedVersion: 4
@@ -194,7 +200,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
