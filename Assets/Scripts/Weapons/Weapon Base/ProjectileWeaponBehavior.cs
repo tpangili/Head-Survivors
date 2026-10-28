@@ -15,7 +15,8 @@ public class ProjectileWeaponBehavior : MonoBehaviour
 
     // Current stats
     protected float currentDamage;
-    protected float currentSpeed;
+    public float currentSpeed;
+    public float initialSpeed;
     protected float currentCooldownDuration;
     protected int currentPierce;
 
@@ -24,6 +25,8 @@ public class ProjectileWeaponBehavior : MonoBehaviour
         // Initialize weapon stats
         currentDamage = weaponData.Damage;
         currentSpeed = weaponData.Speed;
+        // Makes sure to store initial speed before speed is increased
+        initialSpeed = weaponData.Speed;
         currentCooldownDuration = weaponData.CooldownDuration;
         currentPierce = weaponData.Pierce;
     }
@@ -31,6 +34,12 @@ public class ProjectileWeaponBehavior : MonoBehaviour
     public float GetCurrentDamage()
     {
         return currentDamage *= FindObjectOfType<PlayerStats>().CurrentMight;
+    }
+
+    public float GetCurrentProjectileSpeed()
+    {
+        float speed = initialSpeed;
+        return speed *= FindObjectOfType<PlayerStats>().CurrentProjectileSpeed;
     }
 
     // Start is called before the first frame update

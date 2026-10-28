@@ -600,6 +600,12 @@ MonoBehaviour:
   - passiveItemUpgradeIndex: 1
     initialPassiveItem: {fileID: 4136058470515907199, guid: 6fae34a5a2e168a4f822b1d97dae2d45, type: 3}
     passiveItemData: {fileID: 11400000, guid: 1b9c17f8c0aa9374b879522be4a4e134, type: 2}
+  - passiveItemUpgradeIndex: 2
+    initialPassiveItem: {fileID: 5119619116241820687, guid: 35befe4891d1d79439252ad9123caddc, type: 3}
+    passiveItemData: {fileID: 11400000, guid: 1755380ff7fcead45af6625b3ba49512, type: 2}
+  - passiveItemUpgradeIndex: 3
+    initialPassiveItem: {fileID: 7604004177194830089, guid: f41afac7f1f95e047a6d7e6226042c58, type: 3}
+    passiveItemData: {fileID: 11400000, guid: 63bca34593b184a4ab2f02f2c5822e03, type: 2}
   upgradeUIOptions:
   - upgradeNameDisplay: {fileID: 0}
     upgradeDescriptionDisplay: {fileID: 0}

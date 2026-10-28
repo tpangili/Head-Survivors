@@ -17,7 +17,7 @@ MonoBehaviour:
   recovery: 0
   moveSpeed: 4
   might: 1
-  projectileSpeed: 0
+  projectileSpeed: 1
   invinciSeconds: 1.5
   invinciTimeDelta: 0.15
   magnet: 1.6

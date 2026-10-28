@@ -14,6 +14,9 @@ public class KnifeBehavior : ProjectileWeaponBehavior
     void Update()
     {
         // Set movement of knife
+        // NOTE: Apply the projectile speed multiplier to each projectile weapon's
+        // initial speed when making more of those
+        currentSpeed = GetCurrentProjectileSpeed();
         transform.position += direction * currentSpeed * Time.deltaTime;
     }
 }
