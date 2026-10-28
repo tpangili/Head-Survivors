@@ -20,6 +20,7 @@ public class HeadController : WeaponController
     bool finishedFlash = false;
 
     public float deathFadeTime = 0.6f;
+    bool levelUpShown = false;
     
     // Start is called before the first frame update
     protected override void Start()
@@ -40,6 +41,12 @@ public class HeadController : WeaponController
     protected override void Update()
     {
         base.Update();
+
+        if(!levelUpShown && inventory.weaponLevels[weaponIndex] > 1)
+        {
+            GameManager.GenerateFloatingText("LEVEL UP!!!", transform);
+            levelUpShown = true;
+        }
 
         currentHeadTimer -= Time.deltaTime;
         // Displays in inventory how much time is left
