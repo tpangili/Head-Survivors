@@ -150,4 +150,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMagnetized: 0
-  headToRestore: 20
+  headToRestore: 10
