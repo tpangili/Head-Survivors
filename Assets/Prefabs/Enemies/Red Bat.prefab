@@ -184,7 +184,7 @@ MonoBehaviour:
     dropRate: 100
   - name: Head Restore
     itemPrefab: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
-    dropRate: 30
+    dropRate: 20
 --- !u!50 &-6032571724904980546
 Rigidbody2D:
   serializedVersion: 4

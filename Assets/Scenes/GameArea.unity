@@ -1203,6 +1203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EyeHeadPickup (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5085980124626375334, guid: 7d4c2846e1493594e8491f90deb14b48, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6829495447420137983, guid: 7d4c2846e1493594e8491f90deb14b48, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.2330575
@@ -1715,6 +1719,10 @@ PrefabInstance:
     - target: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
       propertyPath: m_Name
       value: Head Restore Item (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6829495447420137983, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2387,6 +2395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EyeHeadPickup (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5085980124626375334, guid: 7d4c2846e1493594e8491f90deb14b48, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6829495447420137983, guid: 7d4c2846e1493594e8491f90deb14b48, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.2092862
@@ -2971,6 +2983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EyeHeadPickup
       objectReference: {fileID: 0}
+    - target: {fileID: 5085980124626375334, guid: 7d4c2846e1493594e8491f90deb14b48, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6829495447420137983, guid: 7d4c2846e1493594e8491f90deb14b48, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.9913907
@@ -3307,6 +3323,10 @@ PrefabInstance:
     - target: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
       propertyPath: m_Name
       value: Head Restore Item (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6829495447420137983, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6155,6 +6175,10 @@ PrefabInstance:
     - target: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
       propertyPath: m_Name
       value: Head Restore Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6829495447420137983, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
       propertyPath: m_LocalPosition.x
