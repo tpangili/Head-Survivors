@@ -170,3 +170,6 @@ MonoBehaviour:
   - name: Head Restore
     itemPrefab: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
     dropRate: 80
+  - name: Blue Exp
+    itemPrefab: {fileID: 3111728068395767218, guid: f9470e09d76138e4d96f070790dacb20, type: 3}
+    dropRate: 100
