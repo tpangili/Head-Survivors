@@ -328,6 +328,7 @@ public class PlayerStats : MonoBehaviour
             {
                 CurrentHealth = CurrentMaxHealth;
             }
+            UpdateHealthBar();
         }
     }
 
