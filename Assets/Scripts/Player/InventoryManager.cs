@@ -99,6 +99,7 @@ public class InventoryManager : MonoBehaviour
             {
                 HeadController head = weaponSlots[i].GetComponent<HeadController>();
                 head.currentHeadTimer += headToRestore;
+                GameManager.GenerateFloatingText("TIMER UP!!!", head.transform);
             }
         }
     }
@@ -165,6 +166,7 @@ public class InventoryManager : MonoBehaviour
                 {
                     head = weapon.GetComponent<HeadController>();
                     head.currentHeadTimer += 20;
+                    GameManager.GenerateFloatingText("TIMER UP!!!", head.transform);
                     return;
                 }
                 // NOTE: Should be changed later to allow for infinite upgrading

@@ -329,6 +329,7 @@ public class PlayerStats : MonoBehaviour
                 CurrentHealth = CurrentMaxHealth;
             }
             UpdateHealthBar();
+            GameManager.GenerateFloatingText("HEALTH UP!!!", transform);
         }
     }
 
