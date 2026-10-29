@@ -291,12 +291,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drops:
-  - name: Blue Exp
-    itemPrefab: {fileID: 3111728068395767218, guid: f9470e09d76138e4d96f070790dacb20, type: 3}
-    dropRate: 100
+  - name: Purple Exp
+    itemPrefab: {fileID: 3111728068395767218, guid: 758d5f5d1acddd2468e933db1f43e498, type: 3}
+    dropRate: 90
   - name: Head Restore
     itemPrefab: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
     dropRate: 20
+  - name: Blue Exp
+    itemPrefab: {fileID: 3111728068395767218, guid: f9470e09d76138e4d96f070790dacb20, type: 3}
+    dropRate: 100
 --- !u!50 &-6032571724904980546
 Rigidbody2D:
   serializedVersion: 4
