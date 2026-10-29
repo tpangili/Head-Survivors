@@ -23,7 +23,7 @@ MonoBehaviour:
   nextLevelPrefab: {fileID: 0}
   name: Soul Blast Level 2
   description: -50% Cooldown, +1 Pierce
-  icon: {fileID: 7482667652216324306, guid: 0a953e0fd92fdb5439d7c31a7c18d2ce, type: 3}
+  icon: {fileID: 21300000, guid: 7b8fbc896d5ac6e4880a965292d668d2, type: 3}
   initialHead: {fileID: 0}
   headTimer: 0
   headTimerLow: 0

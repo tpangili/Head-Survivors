@@ -23,7 +23,7 @@ MonoBehaviour:
   nextLevelPrefab: {fileID: 9011570514286209020, guid: 35de6cccca3c0224ba91d7b588d3b1b8, type: 3}
   name: Soul Blast
   description: Shoots soul in the direction that player aims
-  icon: {fileID: 7482667652216324306, guid: 0a953e0fd92fdb5439d7c31a7c18d2ce, type: 3}
+  icon: {fileID: 21300000, guid: 7b8fbc896d5ac6e4880a965292d668d2, type: 3}
   initialHead: {fileID: 0}
   headTimer: 0
   headTimerLow: 0
