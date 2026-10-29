@@ -40,6 +40,14 @@ public class BreakableProps : MonoBehaviour
         }
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Prop"))
+        {
+            collision.gameObject.SetActive(false);
+        }
+    }
+
     // Coroutine function that makes the enemy flash when taking damage
     IEnumerator DamageFlash()
     {
