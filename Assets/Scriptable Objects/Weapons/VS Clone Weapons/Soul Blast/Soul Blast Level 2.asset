@@ -15,14 +15,14 @@ MonoBehaviour:
   prefab: {fileID: 2542900901095366592, guid: e437b901d8328484796ad0ab3bd0208a, type: 3}
   damage: 5
   speed: 10
-  cooldownDuration: 1.5
+  cooldownDuration: 1.9
   pierce: 2
   head: {fileID: 0}
   headAction: {fileID: 0}
   level: 2
-  nextLevelPrefab: {fileID: 0}
+  nextLevelPrefab: {fileID: 9011570514286209020, guid: 1b189c72e30d00d4fa67c0b08d9a60fa, type: 3}
   name: Soul Blast Level 2
-  description: -50% Cooldown, +1 Pierce
+  description: -10% Cooldown, +1 Pierce
   icon: {fileID: 21300000, guid: 7b8fbc896d5ac6e4880a965292d668d2, type: 3}
   initialHead: {fileID: 0}
   headTimer: 0
