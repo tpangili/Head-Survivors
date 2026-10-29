@@ -15,6 +15,6 @@ MonoBehaviour:
   multiplier: 10
   level: 8
   nextLevelPrefab: {fileID: 5027731516821404681, guid: 7d762b983ebf23a45be22534fb9d1a0a, type: 3}
-  name: Magnet Septum
+  name: Magnet Septum Level 8
   description: Increases collection radius by 10%
   icon: {fileID: 21300000, guid: 1ae86369a73b96b4ab452d379ea56a1c, type: 3}

@@ -15,6 +15,6 @@ MonoBehaviour:
   multiplier: 10
   level: 8
   nextLevelPrefab: {fileID: 7604004177194830089, guid: ea710818ce290a848b9cd5908cb2cd43, type: 3}
-  name: Bullet Earrings
+  name: Bullet Earrings Level 8
   description: Increases Projectile Speed by 10%
   icon: {fileID: 21300000, guid: 2cf3d5ed4e1b2924482de5c574b58fcf, type: 3}
