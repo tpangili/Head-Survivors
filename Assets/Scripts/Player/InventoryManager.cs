@@ -332,9 +332,9 @@ public class InventoryManager : MonoBehaviour
             }
             else if(upgradeType == 2)
             {
-                PassiveItemUpgrade chosenPassiveItemUpgrade = passiveItemUpgradeOptions[Random.Range(0, passiveItemUpgradeOptions.Count)];
+                PassiveItemUpgrade chosenPassiveItemUpgrade = passiveItemUpgradeOptions[Random.Range(0, availablePassiveItemUpgrades.Count)];
 
-                // Removes version of weapon so it doesn't appear again as a duplicate
+                // Removes version of passive item so it doesn't appear again as a duplicate
                 availablePassiveItemUpgrades.Remove(chosenPassiveItemUpgrade);
                 
                 if(chosenPassiveItemUpgrade != null)
