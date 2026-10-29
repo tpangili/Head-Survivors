@@ -3651,6 +3651,10 @@ MonoBehaviour:
       enemyCount: 4
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 8e5c21e991adc844bbe6b018855bbd15, type: 3}
+    - enemyName: Scary Enemy
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 918094212575226413, guid: 07540f91c543855469527d22007c6961, type: 3}
     waveQuota: 0
     spawnInterval: 1
     spawnCount: 0

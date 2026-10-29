@@ -11,6 +11,9 @@ public class EnemyMovement : MonoBehaviour
     Vector2 knockbackVelocity;
     float knockbackDuration;
 
+    // Used to handle an enemy with superarmor
+    public bool isScary = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,10 @@ public class EnemyMovement : MonoBehaviour
 
     public void Knockback(Vector2 velocity, float duration)
     {
+        if (isScary)
+        {
+            return;
+        }
         // Ignore the knockback if the duration is greater than 0
         if(knockbackDuration > 0)
         {
