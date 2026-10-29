@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbd9b54d2c95324bacc5bc012f6fa5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 703c23d0558f792459d51492c1202617, type: 2}
+  weaponData: {fileID: 11400000, guid: 231f719e774d4ec49a65171f1a681a29, type: 2}
   destroyAfterSeconds: 2
   theta: 0
 --- !u!60 &4885130467137869856

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4e3928b31ea2447b228fef70e1a5ea, type: 3}
+  m_Name: Eyes Level 9
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2542900901095366592, guid: 99a13ddee5b869d4097ae8b0be03cb59, type: 3}
+  damage: 4
+  speed: 0
+  cooldownDuration: 1
+  pierce: 10
+  head: {fileID: 21300000, guid: 4b60070811ce28042af8d18f4395a446, type: 3}
+  headAction: {fileID: 21300000, guid: e1427c949b598cf42bd013bf66bc9090, type: 3}
+  level: 9
+  nextLevelPrefab: {fileID: 6385710107871710930, guid: d35d79410a1f46a469889057d02e11b3, type: 3}
+  name: Eye Head Level 9
+  description: Cooldown reduced by .5
+  icon: {fileID: 21300000, guid: 6cd523b25f4723747aef5b2b76246548, type: 3}
+  initialHead: {fileID: 6385710107871710930, guid: b333b13af819be940b1d592b20a2d48e, type: 3}
+  headTimer: 40
+  headTimerLow: 10
