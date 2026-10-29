@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1301915481295166706}
   - component: {fileID: 8546297549574925209}
   m_Layer: 7
-  m_Name: Might Item
+  m_Name: Tough Bandana Level 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09bf1fb7d23cfd545b3150647bff8dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passiveItemData: {fileID: 11400000, guid: 1b9c17f8c0aa9374b879522be4a4e134, type: 2}
+  passiveItemData: {fileID: 11400000, guid: 0452ee645ea3e7540a8d2dceeb4855b4, type: 2}

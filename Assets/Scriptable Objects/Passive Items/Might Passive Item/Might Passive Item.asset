@@ -15,6 +15,6 @@ MonoBehaviour:
   multiplier: 30
   level: 1
   nextLevelPrefab: {fileID: 4136058470515907199, guid: 9de5e09ed1985ce49b4420170f59b084, type: 3}
-  name: Might
+  name: Tough Bandana
   description: Increases damage dealt by 30%
-  icon: {fileID: 2747690628134850419, guid: 5bcc3060202263e4fb4db0055e75697c, type: 3}
+  icon: {fileID: 21300000, guid: 76b5ae449c3376b41ba2d097c10fb937, type: 3}
