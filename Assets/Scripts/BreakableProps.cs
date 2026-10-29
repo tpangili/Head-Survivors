@@ -34,7 +34,7 @@ public class BreakableProps : MonoBehaviour
             //Debug.Log("Floating text generated");
         }
 
-        if(health <= 0)
+        if(health <= 0 && !isDying)
         {
             Kill();
         }
