@@ -114,6 +114,26 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    // Used when timer bullets deplete head timers
+    public void DepleteHeadTimers(int headToDeplete)
+    {
+        // Iterates through weapons starting from 1
+        // to skip first non-head default weapon
+        for(int i = 1; i < weaponSlots.Count; i++)
+        {
+            if(weaponSlots[i] != null)
+            {
+                HeadController head = weaponSlots[i].GetComponent<HeadController>();
+                head.currentHeadTimer -= headToDeplete;
+                GameManager.GenerateFloatingText("TIMER DOWN!!!", head.transform);
+                if(head.currentHeadTimer <= 0)
+                {
+                    head.Kill();
+                }
+            }
+        }
+    }
+
     // Adds passive item to specific inventory slot
     public void AddPassiveItem(int slotIndex, PassiveItem passiveItem)
     {

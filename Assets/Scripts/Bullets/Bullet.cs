@@ -58,7 +58,7 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         // Handles a regular bullet doing damage
         if (other.CompareTag("Hitbox"))

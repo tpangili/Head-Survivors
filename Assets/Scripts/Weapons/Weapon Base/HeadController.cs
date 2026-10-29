@@ -80,6 +80,12 @@ public class HeadController : WeaponController
         base.Attack();
     }
 
+    public void Kill()
+    {
+        // Removes head from inventory and destroys it
+        StartCoroutine(KillFade());
+    }
+
     private IEnumerator FlashRed()
     {
         flashSeconds = headTimerLow;
