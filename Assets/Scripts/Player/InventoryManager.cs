@@ -91,16 +91,26 @@ public class InventoryManager : MonoBehaviour
     // Used when head timer restore item is picked up by player
     public void RestoreHeadTimers(int headToRestore)
     {
+        bool noHead = true;
         // Iterates through weapons starting from 1
         // to skip first non-head default weapon
         for(int i = 1; i < weaponSlots.Count; i++)
         {
             if(weaponSlots[i] != null)
             {
+                noHead = false;
                 HeadController head = weaponSlots[i].GetComponent<HeadController>();
                 head.currentHeadTimer += headToRestore;
                 GameManager.GenerateFloatingText("TIMER UP!!!", head.transform);
             }
+        }
+
+        // Returns if player has no heads
+        if(noHead)
+        {
+            GameManager.GenerateFloatingText("NO HEAD?", player.transform);
+            Debug.Log("NO HEAD");
+            return;
         }
     }
 
@@ -166,7 +176,7 @@ public class InventoryManager : MonoBehaviour
                 {
                     head = weapon.GetComponent<HeadController>();
                     head.currentHeadTimer += 20;
-                    GameManager.GenerateFloatingText("TIMER UP!!!", head.transform);
+                    GameManager.GenerateFloatingText("MAX LEVEL!!!\nTIMER UP!!!", head.transform);
                     return;
                 }
                 // NOTE: Should be changed later to allow for infinite upgrading

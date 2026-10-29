@@ -216,6 +216,7 @@ public class GameManager : MonoBehaviour
         choosingUpgrade = false;
         Time.timeScale = 1f; // resume game
         LevelUpScreen.SetActive(false);
+        Cursor.visible = false; // Removes mouse cursor from screen
         ChangeState(GameState.Gameplay);
     }
 

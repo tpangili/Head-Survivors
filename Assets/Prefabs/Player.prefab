@@ -606,6 +606,9 @@ MonoBehaviour:
   - passiveItemUpgradeIndex: 3
     initialPassiveItem: {fileID: 7604004177194830089, guid: f41afac7f1f95e047a6d7e6226042c58, type: 3}
     passiveItemData: {fileID: 11400000, guid: 63bca34593b184a4ab2f02f2c5822e03, type: 2}
+  - passiveItemUpgradeIndex: 4
+    initialPassiveItem: {fileID: 5027731516821404681, guid: 67d4436d80ae33d47be861d009d6a8fc, type: 3}
+    passiveItemData: {fileID: 11400000, guid: 7e3727628c59faf4e95b38868004b597, type: 2}
   upgradeUIOptions:
   - upgradeNameDisplay: {fileID: 0}
     upgradeDescriptionDisplay: {fileID: 0}
