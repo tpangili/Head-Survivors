@@ -186,6 +186,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6076218824054703270}
   - {fileID: 5594316472510056923}
   - {fileID: 3688577457944952361}
   m_Father: {fileID: 0}
@@ -254,6 +255,62 @@ MonoBehaviour:
   - {fileID: 8811410323483637584}
   propPrefabs:
   - {fileID: 8513347538897177703, guid: c3adc2a89d7a5434fa6bd9d8989e3a0b, type: 3}
+--- !u!1 &5341635497988285396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6076218824054703270}
+  - component: {fileID: 674098029295507882}
+  m_Layer: 0
+  m_Name: tile swaper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6076218824054703270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5341635497988285396}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.3811848, y: 0.79263675, z: 0.051678587}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3994880634624716934}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &674098029295507882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5341635497988285396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79c2f4ecc63a4143af56e8eb58e9a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 1717824722395902413}
+  t1_1: {fileID: 11400000, guid: 25c8ca3f9e02ce84a86c86219f4ea4be, type: 2}
+  t1_2: {fileID: 11400000, guid: f7e9013f328e807408f663867d5bbbb4, type: 2}
+  t2_1: {fileID: 11400000, guid: 3dc3a1734eb46f34caa84969c5e5af5c, type: 2}
+  t2_2: {fileID: 11400000, guid: 3dc3a1734eb46f34caa84969c5e5af5c, type: 2}
+  t3_1: {fileID: 11400000, guid: fbc2e52ee623baa4da1b6ce292d216f5, type: 2}
+  t3_2: {fileID: 11400000, guid: 06699b3d06d588748a59b2d22028f09d, type: 2}
+  WaveToStartLevel2: 1
+  WaveToStartLevel3: 3
+  WaveCounterSource: {fileID: 0}
+  l2: 0
+  l3: 0
 --- !u!1 &7782855960873256136
 GameObject:
   m_ObjectHideFlags: 0

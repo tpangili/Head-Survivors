@@ -5596,6 +5596,15 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   deleteCulledChunks: 0
+  waveCounter: {fileID: 1120140130}
+  t1_1: {fileID: 11400000, guid: 25c8ca3f9e02ce84a86c86219f4ea4be, type: 2}
+  t1_2: {fileID: 11400000, guid: f7e9013f328e807408f663867d5bbbb4, type: 2}
+  t2_1: {fileID: 11400000, guid: 3dc3a1734eb46f34caa84969c5e5af5c, type: 2}
+  t2_2: {fileID: 11400000, guid: 3dc3a1734eb46f34caa84969c5e5af5c, type: 2}
+  t3_1: {fileID: 11400000, guid: fbc2e52ee623baa4da1b6ce292d216f5, type: 2}
+  t3_2: {fileID: 11400000, guid: cb2a0abf446f77b47ac6ebc14daae359, type: 2}
+  WaveToStartLevel2: 2
+  WaveToStartLevel3: 3
 --- !u!1 &1540359395
 GameObject:
   m_ObjectHideFlags: 0
@@ -7381,6 +7390,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1516955072}
     m_Modifications:
+    - target: {fileID: 2837870890449749632, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
+      propertyPath: WaveCounterSource
+      value: 
+      objectReference: {fileID: 1120140130}
     - target: {fileID: 3994880634624716934, guid: d93c73f6c022f0044aa154ff2bda85e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

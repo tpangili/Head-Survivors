@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.Tilemaps;
+using Unity.VisualScripting;
 
 public class MapController : MonoBehaviour
 {
@@ -14,6 +16,14 @@ public class MapController : MonoBehaviour
     public Vector2 chunkSize = new Vector2(20f, 20f);
     public LayerMask terrainMask = 1;
     public bool deleteCulledChunks = false;
+
+    [Header("Level Transition Information for Chunks")]
+    public EnemySpawner waveCounter;
+    public Tile t1_1, t1_2;
+    public Tile t2_1, t2_2;
+    public Tile t3_1, t3_2;
+    public int WaveToStartLevel2;
+    public int WaveToStartLevel3;
 
     // Stores the last camera's position and size.
     // To determine whether we need to do checks.
@@ -151,6 +161,16 @@ public class MapController : MonoBehaviour
         //Debug.Log("about to spawn chunk");
         GameObject chunk = Instantiate(terrainChunks[rand], transform);
         chunk.transform.position = spawnPosition;
+        tileswap ts = chunk.GetComponentInChildren<tileswap>();
+        ts.WaveCounterSource = waveCounter;
+        ts.t1_1 = t1_1;
+        ts.t1_2 = t1_2;
+        ts.t2_1 = t2_1;
+        ts.t2_2 = t2_2;
+        ts.t3_1 = t3_1;
+        ts.t3_2 = t3_2;
+        ts.WaveToStartLevel2 = WaveToStartLevel2;
+        ts.WaveToStartLevel3 = WaveToStartLevel3;
         return chunk;
     }
 
