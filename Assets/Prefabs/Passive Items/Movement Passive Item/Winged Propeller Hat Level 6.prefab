@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9137420947903647196}
   - component: {fileID: 740358957391065504}
   m_Layer: 7
-  m_Name: Movement Item Level 2
+  m_Name: Winged Propeller Hat Level 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec8d42dca32c1d4bb7e7a0bc1461c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passiveItemData: {fileID: 11400000, guid: 08f64462f78cb7c49938ceb97dce7483, type: 2}
+  passiveItemData: {fileID: 11400000, guid: dac3da8d0adfe8446a49bc12b4d87eb0, type: 2}

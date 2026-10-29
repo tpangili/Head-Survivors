@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb62dee03d610344eb098a1fbb7fcd3e, type: 3}
   m_Name: Movement Passive Item
   m_EditorClassIdentifier: 
-  multiplier: 10
+  multiplier: 5
   level: 1
   nextLevelPrefab: {fileID: 7460736754103950151, guid: c18ba7423259af34e9ca1e1678ae5bc0, type: 3}
-  name: Movement
-  description: Increases movement speed by 10%
-  icon: {fileID: 3625043607559282579, guid: 9405f45926593564e88ea20bfa816376, type: 3}
+  name: Winged Propeller Hat
+  description: Increases Movement Speed by 5%
+  icon: {fileID: 21300000, guid: 6fb70a38e50523a4cb0bde5c1f873031, type: 3}

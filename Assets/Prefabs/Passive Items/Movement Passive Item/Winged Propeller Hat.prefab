@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9137420947903647196}
   - component: {fileID: 740358957391065504}
   m_Layer: 7
-  m_Name: Movement Item
+  m_Name: Winged Propeller Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
