@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc4e3928b31ea2447b228fef70e1a5ea, type: 3}
-  m_Name: Knife Weapon
+  m_Name: Soul Blast
   m_EditorClassIdentifier: 
   prefab: {fileID: 2542900901095366592, guid: 89b5030d213e2a749a1079744a6acbe8, type: 3}
   damage: 5
@@ -21,6 +21,9 @@ MonoBehaviour:
   headAction: {fileID: 0}
   level: 1
   nextLevelPrefab: {fileID: 9011570514286209020, guid: 35de6cccca3c0224ba91d7b588d3b1b8, type: 3}
-  name: Knife
-  description: Shoots knives in the direction that player aims
+  name: Soul Blast
+  description: Shoots soul in the direction that player aims
   icon: {fileID: 7482667652216324306, guid: 0a953e0fd92fdb5439d7c31a7c18d2ce, type: 3}
+  initialHead: {fileID: 0}
+  headTimer: 0
+  headTimerLow: 0

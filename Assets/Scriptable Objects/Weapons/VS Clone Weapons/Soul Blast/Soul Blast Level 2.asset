@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc4e3928b31ea2447b228fef70e1a5ea, type: 3}
-  m_Name: Knife Weapon Level 2
+  m_Name: Soul Blast Level 2
   m_EditorClassIdentifier: 
   prefab: {fileID: 2542900901095366592, guid: e437b901d8328484796ad0ab3bd0208a, type: 3}
   damage: 5
   speed: 10
   cooldownDuration: 1.5
-  pierce: 1
+  pierce: 2
   head: {fileID: 0}
   headAction: {fileID: 0}
   level: 2
   nextLevelPrefab: {fileID: 0}
-  name: Knife Level 2
-  description: Cooldown decreased by 50%
+  name: Soul Blast Level 2
+  description: -50% Cooldown, +1 Pierce
   icon: {fileID: 7482667652216324306, guid: 0a953e0fd92fdb5439d7c31a7c18d2ce, type: 3}
   initialHead: {fileID: 0}
   headTimer: 0

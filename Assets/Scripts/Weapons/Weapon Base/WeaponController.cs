@@ -8,6 +8,7 @@ public class WeaponController : MonoBehaviour
     [Header("Weapon Stats")]
     public WeaponScriptableObject weaponData;
     private float currentCooldown;
+    [HideInInspector]
     public int weaponIndex; // NOTE: set in AddWeapon() function, used mainly for head timer ui display
 
     protected PlayerController pm;

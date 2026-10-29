@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 2290176560563930772}
   - component: {fileID: 1408257316259982405}
   - component: {fileID: 4443879587387197367}
+  - component: {fileID: -1007856776339960617}
   m_Layer: 0
-  m_Name: Knife Weapon Level 2
+  m_Name: Soul Blast Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: -538332263
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.15720558, g: 0.9811321, b: 0.04627969, a: 1}
+  m_Sprite: {fileID: -1895730949, guid: 04ff931a1dcbe9042b7cc6e83ab7b507, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,8 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4af10c27e23f745bf467993ad95d3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: bf6212644fc056444a7a8574958d7601, type: 2}
-  destroyAfterSeconds: 3
+  weaponData: {fileID: 11400000, guid: f60d81a60bab2c3439ea7281d10fe437, type: 2}
+  destroyAfterSeconds: 2
+  currentSpeed: 0
+  initialSpeed: 0
 --- !u!60 &1408257316259982405
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -136,8 +139,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.16, y: 1.11}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -176,3 +179,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &-1007856776339960617
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2542900901095366592}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e1fe92082baec72489728346a954fa9f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4725662304779922224}
   - component: {fileID: 2121131206112872385}
   m_Layer: 7
-  m_Name: Knife Controller
+  m_Name: Soul Blast Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
