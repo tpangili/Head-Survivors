@@ -4831,7 +4831,7 @@ MonoBehaviour:
   currentMightDisplay: {fileID: 389801145}
   currentProjectileSpeedDisplay: {fileID: 1254858492}
   currentMagnetDisplay: {fileID: 463399681}
-  timeLimit: 600
+  timeLimit: 575
   stopwatchDisplay: {fileID: 2122432317}
   isGameOver: 0
   isPaused: 0

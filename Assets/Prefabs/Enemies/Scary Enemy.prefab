@@ -168,6 +168,7 @@ MonoBehaviour:
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   damageFlashDuration: 0.2
   deathFadeTime: 0.6
+  isScary: 1
 --- !u!114 &4146914079109591997
 MonoBehaviour:
   m_ObjectHideFlags: 0
