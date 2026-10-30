@@ -174,6 +174,9 @@ MonoBehaviour:
   - name: Blue Exp
     itemPrefab: {fileID: 3111728068395767218, guid: f9470e09d76138e4d96f070790dacb20, type: 3}
     dropRate: 100
+  - name: Tragic Head
+    itemPrefab: {fileID: 6984261343127204957, guid: e45f097efb07bd0439a3910a6e656483, type: 3}
+    dropRate: 60
 --- !u!50 &7469451919277887701
 Rigidbody2D:
   serializedVersion: 4
