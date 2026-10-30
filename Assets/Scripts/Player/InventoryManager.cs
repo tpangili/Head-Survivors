@@ -178,20 +178,25 @@ public class InventoryManager : MonoBehaviour
                 if((i + 1) < weaponUISlots.Count && weaponUISlots[i + 1].enabled == true)
                 {
                     //HeadController keptHead;
-                    for(int j = i; i < weaponUISlots.Count; i++)
+                    for(int j = i; j < weaponUISlots.Count; j++)
                     {
-                        // Brings the next active head one UI slot back
-                        weaponUISlots[j].GetComponent<Image>().sprite = weaponUISlots[j + 1].GetComponent<Image>().sprite;
-                        HeadTimerDisplays[j].text = HeadTimerDisplays[j + 1].text;
-                        // Displays that moved UI slot
-                        weaponUISlots[j].enabled = true;
-                        HeadTimerDisplays[j].enabled = true;
-                        // Disables the previously occupied UI slot
-                        weaponUISlots[j + 1].enabled = false;
-                        HeadTimerDisplays[j + 1].enabled = false;
-                        // Adjusts weaponIndex back one for head controller
-                        /*keptHead = weaponSlots[j].GetComponent<HeadController>();
-                        keptHead.weaponIndex--;*/
+                        if((j + 1) < weaponUISlots.Count && weaponUISlots[j + 1].enabled == true)
+                        {
+                            // Brings the next active head one UI slot back
+                            weaponUISlots[j].GetComponent<Image>().sprite = weaponUISlots[j + 1].GetComponent<Image>().sprite;
+                            HeadTimerDisplays[j].text = HeadTimerDisplays[j + 1].text;
+                            // Displays that moved UI slot
+                            weaponUISlots[j].enabled = true;
+                            HeadTimerDisplays[j].enabled = true;
+                            // Disables the previously occupied UI slot
+                            weaponUISlots[j + 1].enabled = false;
+                            HeadTimerDisplays[j + 1].enabled = false;
+                            // Adjusts weaponIndex back one for head controller
+                            if(weaponSlots[j] != null)
+                            {
+                                weaponSlots[j].weaponIndex = j;
+                            }
+                        }
                     }
                 }
                 //weaponUISlots[i].sprite = null;
