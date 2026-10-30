@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260eabe452366824fa0ddb618e511e32, type: 3}
   m_Name: Scary Enemy
   m_EditorClassIdentifier: 
-  moveSpeed: 1.75
+  moveSpeed: 2.5
   maxHealth: 999999
-  damage: 60
+  damage: 80

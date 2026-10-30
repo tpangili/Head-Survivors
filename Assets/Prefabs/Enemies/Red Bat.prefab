@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8c82eb2cbd71649b193ddc5389ec6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isScary: 0
 --- !u!114 &-8798383116410302202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +186,7 @@ MonoBehaviour:
     dropRate: 100
   - name: Head Restore
     itemPrefab: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
-    dropRate: 20
+    dropRate: 10
 --- !u!50 &-6032571724904980546
 Rigidbody2D:
   serializedVersion: 4

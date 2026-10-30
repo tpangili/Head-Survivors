@@ -28,6 +28,9 @@ public class EnemyStats : MonoBehaviour
     SpriteRenderer sr;
     EnemyMovement movement;
 
+    // Used to handle an enemy with superarmor
+    public bool isScary = false;
+
     // Flag for enemy death
     bool isDying = false;
 
@@ -61,6 +64,11 @@ public class EnemyStats : MonoBehaviour
     // and where the damage is coming from (sourcePosition)
     public void TakeDamage(float dmg, Vector2 sourcePosition, float knockbackForce = 5f, float knockbackDuration = 0.2f)
     {
+        if (isScary)
+        {
+            return;
+        }
+        
         currentHealth -= dmg;
         StartCoroutine(DamageFlash());
 

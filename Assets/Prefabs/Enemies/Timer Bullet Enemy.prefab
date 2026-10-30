@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8c82eb2cbd71649b193ddc5389ec6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isScary: 0
 --- !u!114 &-8798383116410302202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,9 +294,9 @@ MonoBehaviour:
   drops:
   - name: Head Restore
     itemPrefab: {fileID: 5085980124626375334, guid: 6c2f4d3633b14f14cae41153ffe0e027, type: 3}
-    dropRate: 20
-  - name: Blue Exp
-    itemPrefab: {fileID: 3111728068395767218, guid: f9470e09d76138e4d96f070790dacb20, type: 3}
+    dropRate: 10
+  - name: Purple Exp
+    itemPrefab: {fileID: 3111728068395767218, guid: 758d5f5d1acddd2468e933db1f43e498, type: 3}
     dropRate: 100
 --- !u!50 &-6032571724904980546
 Rigidbody2D:
