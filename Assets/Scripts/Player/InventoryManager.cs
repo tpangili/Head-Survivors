@@ -169,9 +169,31 @@ public class InventoryManager : MonoBehaviour
             if(weaponSlots[i] != null && weaponSlots[i].weaponData.InitialHead == head.weaponData.InitialHead)
             {
                 weaponSlots.RemoveAt(i);
+                weaponSlots.Add(null);
                 weaponLevels.RemoveAt(i);
+                weaponLevels.Add(0);
                 weaponUISlots[i].enabled = false;
                 HeadTimerDisplays[i].enabled = false;
+                // Adjusts the UI displays for inventory and head timers
+                if((i + 1) < weaponUISlots.Count && weaponUISlots[i + 1].enabled == true)
+                {
+                    //HeadController keptHead;
+                    for(int j = i; i < weaponUISlots.Count; i++)
+                    {
+                        // Brings the next active head one UI slot back
+                        weaponUISlots[j].GetComponent<Image>().sprite = weaponUISlots[j + 1].GetComponent<Image>().sprite;
+                        HeadTimerDisplays[j].text = HeadTimerDisplays[j + 1].text;
+                        // Displays that moved UI slot
+                        weaponUISlots[j].enabled = true;
+                        HeadTimerDisplays[j].enabled = true;
+                        // Disables the previously occupied UI slot
+                        weaponUISlots[j + 1].enabled = false;
+                        HeadTimerDisplays[j + 1].enabled = false;
+                        // Adjusts weaponIndex back one for head controller
+                        /*keptHead = weaponSlots[j].GetComponent<HeadController>();
+                        keptHead.weaponIndex--;*/
+                    }
+                }
                 //weaponUISlots[i].sprite = null;
                 player.weaponIndex--;
                 Destroy(head.gameObject);
