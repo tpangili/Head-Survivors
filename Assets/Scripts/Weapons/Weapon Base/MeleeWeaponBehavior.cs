@@ -15,6 +15,7 @@ public class MeleeWeaponBehavior : MonoBehaviour
 
     // Current stats
     protected float currentDamage;
+    protected float initialDamage;
     protected float currentSpeed;
     protected float currentCooldownDuration;
     protected float currentPierce;
@@ -23,6 +24,8 @@ public class MeleeWeaponBehavior : MonoBehaviour
     {
         // Initialize weapon stats
         currentDamage = weaponData.Damage;
+        // Makes sure to store initial damage before damage is increased
+        initialDamage = weaponData.Damage;
         currentSpeed = weaponData.Speed;
         currentCooldownDuration = weaponData.CooldownDuration;
         currentPierce = weaponData.Pierce;
@@ -30,7 +33,8 @@ public class MeleeWeaponBehavior : MonoBehaviour
 
     public float GetCurrentDamage()
     {
-        return currentDamage *= FindObjectOfType<PlayerStats>().CurrentMight;
+        float damage = initialDamage;
+        return damage *= FindObjectOfType<PlayerStats>().CurrentMight;
     }
     
     // Start is called before the first frame update
