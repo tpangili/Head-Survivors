@@ -494,9 +494,9 @@ MonoBehaviour:
   levelRanges:
   - startLevel: 1
     endLevel: 3
-    experienceCapIncrease: 100
+    experienceCapIncrease: 50
   - startLevel: 4
-    endLevel: 5
+    endLevel: 6
     experienceCapIncrease: 100
   weaponIndex: 0
   passiveItemIndex: 0

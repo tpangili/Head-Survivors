@@ -3512,7 +3512,7 @@ MonoBehaviour:
   - waveName: Wave 1
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 10
+      enemyCount: 30
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
     waveQuota: 0
@@ -3521,11 +3521,11 @@ MonoBehaviour:
   - waveName: Wave 2
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 8
+      enemyCount: 36
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
     - enemyName: Red Bat
-      enemyCount: 4
+      enemyCount: 17
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     waveQuota: 0
@@ -3534,11 +3534,11 @@ MonoBehaviour:
   - waveName: Wave 3
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 7
+      enemyCount: 45
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
     - enemyName: Red Bat
-      enemyCount: 4
+      enemyCount: 20
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     waveQuota: 0
@@ -3547,15 +3547,15 @@ MonoBehaviour:
   - waveName: Wave 4
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 8
+      enemyCount: 50
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
     - enemyName: Red Bat
-      enemyCount: 4
+      enemyCount: 25
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 2
+      enemyCount: 5
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
     waveQuota: 0
@@ -3564,15 +3564,15 @@ MonoBehaviour:
   - waveName: Wave 5
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 12
+      enemyCount: 55
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
     - enemyName: Red Bat
-      enemyCount: 5
+      enemyCount: 30
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 4
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
     waveQuota: 0
@@ -3581,15 +3581,15 @@ MonoBehaviour:
   - waveName: Wave 6
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 8
+      enemyCount: 60
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
     - enemyName: Red Bat
-      enemyCount: 4
+      enemyCount: 35
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 4
+      enemyCount: 10
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
     waveQuota: 0
@@ -3598,19 +3598,19 @@ MonoBehaviour:
   - waveName: Wave 7
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 15
+      enemyCount: 65
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
     - enemyName: Red Bat
-      enemyCount: 8
+      enemyCount: 40
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 2
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
     - enemyName: Timer Bullet Enemy
-      enemyCount: 2
+      enemyCount: 5
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 8e5c21e991adc844bbe6b018855bbd15, type: 3}
     waveQuota: 0
@@ -3619,36 +3619,40 @@ MonoBehaviour:
   - waveName: Wave 8
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 8
+      enemyCount: 65
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
     - enemyName: Red Bat
-      enemyCount: 4
+      enemyCount: 45
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 4
+      enemyCount: 10
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
+    - enemyName: Timer Bullet Enemy
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 918094212575226413, guid: 8e5c21e991adc844bbe6b018855bbd15, type: 3}
     waveQuota: 0
     spawnInterval: 1
     spawnCount: 0
   - waveName: Wave 9
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 20
+      enemyCount: 65
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
     - enemyName: Red Bat
-      enemyCount: 8
+      enemyCount: 45
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 4
+      enemyCount: 7
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
     - enemyName: Timer Bullet Enemy
-      enemyCount: 4
+      enemyCount: 7
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 8e5c21e991adc844bbe6b018855bbd15, type: 3}
     - enemyName: Scary Enemy
@@ -3660,10 +3664,10 @@ MonoBehaviour:
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 6
-  maxEnemyIncrease: 4
+  maxEnemiesAllowed: 5
+  maxEnemyIncrease: 5
   maxEnemiesReached: 0
-  waveInterval: 30
+  waveInterval: 60
   relativeSpawnPoints:
   - {fileID: 12417900}
   - {fileID: 1735077129}
@@ -4888,12 +4892,14 @@ MonoBehaviour:
   currentMightDisplay: {fileID: 389801145}
   currentProjectileSpeedDisplay: {fileID: 1254858492}
   currentMagnetDisplay: {fileID: 463399681}
-  timeLimit: 300
+  timeLimit: 600
   stopwatchDisplay: {fileID: 2122432317}
   isGameOver: 0
   isPaused: 0
   choosingUpgrade: 0
   playerObject: {fileID: 7070735785472306502}
+  isWin: 0
+  gameOverDisplay: {fileID: 1212643015}
 --- !u!4 &1360857985
 Transform:
   m_ObjectHideFlags: 0
@@ -7461,6 +7467,26 @@ PrefabInstance:
       propertyPath: firstPassiveItemTest
       value: 
       objectReference: {fileID: 7604004177194830089, guid: f41afac7f1f95e047a6d7e6226042c58, type: 3}
+    - target: {fileID: 4993760816439430549, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: levelRanges.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993760816439430549, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: levelRanges.Array.data[1].endLevel
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993760816439430549, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: levelRanges.Array.data[2].endLevel
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993760816439430549, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: levelRanges.Array.data[2].startLevel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993760816439430549, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
+      propertyPath: levelRanges.Array.data[2].experienceCapIncrease
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5230782153871811259, guid: 16313b284fd900449982f7eb1015d45e, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.26

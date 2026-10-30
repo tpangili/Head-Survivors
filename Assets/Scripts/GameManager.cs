@@ -54,6 +54,10 @@ public class GameManager : MonoBehaviour
 
     // Reference to the player's game object
     public GameObject playerObject;
+
+    // Handles changing game over screen to win
+    public bool isWin = false;
+    public TextMeshProUGUI gameOverDisplay;
     
 
     void Awake()
@@ -96,6 +100,10 @@ public class GameManager : MonoBehaviour
                     Time.timeScale = 0f; // Stop game entirely
                     Cursor.visible = true;
                     //Debug.Log("GAME IS OVER");
+                    if (isWin)
+                    {
+                        gameOverDisplay.text = "YOU WIN!!";
+                    }
                     DisplayResults();
                 }
                 break;
@@ -191,6 +199,7 @@ public class GameManager : MonoBehaviour
         // Could maybe use this for transitioning to next level
         if(stopwatchTime >= timeLimit)
         {
+            isWin = true;
             GameOver();
         }
     }
