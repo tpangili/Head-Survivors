@@ -100,7 +100,7 @@ MonoBehaviour:
   bullet: {fileID: 9133180692562523069, guid: 79f8c79d0ff5f2b4994c0e51fb9b216c, type: 3}
   bullet2: {fileID: 0}
   bulletLife: 20
-  speed: 6
+  speed: 5.5
   bulletSpace: 1
   bulletNum: 1
   spreadEnable: 0
@@ -279,6 +279,7 @@ MonoBehaviour:
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   damageFlashDuration: 0.2
   deathFadeTime: 0.6
+  isScary: 0
 --- !u!114 &4146914079109591997
 MonoBehaviour:
   m_ObjectHideFlags: 0

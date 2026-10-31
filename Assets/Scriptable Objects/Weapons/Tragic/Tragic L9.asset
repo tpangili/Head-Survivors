@@ -17,13 +17,13 @@ MonoBehaviour:
   speed: 7.5
   cooldownDuration: 2
   pierce: 0
-  head: {fileID: 21300000, guid: 8c916f562efd43040b73bd2cf28ff41a, type: 3}
-  headAction: {fileID: 21300000, guid: 8c916f562efd43040b73bd2cf28ff41a, type: 3}
+  head: {fileID: 21300000, guid: a3408ad81fb26f84392c04ded3c859ae, type: 3}
+  headAction: {fileID: 21300000, guid: a3408ad81fb26f84392c04ded3c859ae, type: 3}
   level: 9
   nextLevelPrefab: {fileID: 2831903904224599167, guid: 3dfbe0df852791349babbb97b22992b5, type: 3}
   name: Tragic Level 9
   description: Penultimate depression
-  icon: {fileID: 21300000, guid: 8c916f562efd43040b73bd2cf28ff41a, type: 3}
+  icon: {fileID: 21300000, guid: a3408ad81fb26f84392c04ded3c859ae, type: 3}
   initialHead: {fileID: 2831903904224599167, guid: 3f671b0298929b0489ec11865107fa51, type: 3}
-  headTimer: 30
+  headTimer: 40
   headTimerLow: 10

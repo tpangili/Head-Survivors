@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -538332263
   m_SortingLayer: 3
   m_SortingOrder: 21
-  m_Sprite: {fileID: 21300000, guid: 8c916f562efd43040b73bd2cf28ff41a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a3408ad81fb26f84392c04ded3c859ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 1ece9c6d329259f4ead8ccba44b41112, type: 2}
   weaponIndex: 0
-  restSprite: {fileID: 21300000, guid: 8c916f562efd43040b73bd2cf28ff41a, type: 3}
-  attackSprite: {fileID: 21300000, guid: 8c916f562efd43040b73bd2cf28ff41a, type: 3}
+  restSprite: {fileID: 21300000, guid: a3408ad81fb26f84392c04ded3c859ae, type: 3}
+  attackSprite: {fileID: 21300000, guid: a3408ad81fb26f84392c04ded3c859ae, type: 3}
   headDisplay: {fileID: 7969079408141981814}
   currentHeadTimer: 30
   headTimerLow: 5

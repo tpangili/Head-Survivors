@@ -3486,15 +3486,15 @@ MonoBehaviour:
   - waveName: Wave 4
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 50
+      enemyCount: 52
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
     - enemyName: Red Bat
-      enemyCount: 25
+      enemyCount: 27
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 5
+      enemyCount: 3
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
     waveQuota: 0
@@ -3511,7 +3511,7 @@ MonoBehaviour:
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 8
+      enemyCount: 4
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
     waveQuota: 0
@@ -3520,15 +3520,15 @@ MonoBehaviour:
   - waveName: Wave 6
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 60
+      enemyCount: 61
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: bd9e72cb94d068a43b427a2ebb09fa2f, type: 3}
     - enemyName: Red Bat
-      enemyCount: 35
+      enemyCount: 38
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 10
+      enemyCount: 5
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
     waveQuota: 0
@@ -3545,11 +3545,11 @@ MonoBehaviour:
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 8
+      enemyCount: 5
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
     - enemyName: Timer Bullet Enemy
-      enemyCount: 5
+      enemyCount: 4
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 8e5c21e991adc844bbe6b018855bbd15, type: 3}
     waveQuota: 0
@@ -3566,11 +3566,11 @@ MonoBehaviour:
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 10
+      enemyCount: 5
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
     - enemyName: Timer Bullet Enemy
-      enemyCount: 7
+      enemyCount: 5
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 8e5c21e991adc844bbe6b018855bbd15, type: 3}
     waveQuota: 0
@@ -3587,11 +3587,11 @@ MonoBehaviour:
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 7f058d478e1f8524c8976d32f6f8c896, type: 3}
     - enemyName: Bullet Enemy
-      enemyCount: 7
+      enemyCount: 6
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: a003d0ec863a17c40853411ac8953880, type: 3}
     - enemyName: Timer Bullet Enemy
-      enemyCount: 7
+      enemyCount: 5
       spawnCount: 0
       enemyPrefab: {fileID: 918094212575226413, guid: 8e5c21e991adc844bbe6b018855bbd15, type: 3}
     - enemyName: Scary Enemy
@@ -4831,7 +4831,7 @@ MonoBehaviour:
   currentMightDisplay: {fileID: 389801145}
   currentProjectileSpeedDisplay: {fileID: 1254858492}
   currentMagnetDisplay: {fileID: 463399681}
-  timeLimit: 575
+  timeLimit: 570
   stopwatchDisplay: {fileID: 2122432317}
   isGameOver: 0
   isPaused: 0
