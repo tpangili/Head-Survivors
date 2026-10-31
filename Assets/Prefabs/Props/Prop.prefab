@@ -177,6 +177,9 @@ MonoBehaviour:
   - name: Tragic Head
     itemPrefab: {fileID: 6984261343127204957, guid: e45f097efb07bd0439a3910a6e656483, type: 3}
     dropRate: 60
+  - name: Comic Head
+    itemPrefab: {fileID: 3450358470935405301, guid: 943f72681f9d29c469ea118c33a77530, type: 3}
+    dropRate: 100
 --- !u!50 &7469451919277887701
 Rigidbody2D:
   serializedVersion: 4

@@ -202,12 +202,12 @@ MonoBehaviour:
   map: {fileID: 1717824722395902413}
   t1_1: {fileID: 11400000, guid: 25c8ca3f9e02ce84a86c86219f4ea4be, type: 2}
   t1_2: {fileID: 11400000, guid: f7e9013f328e807408f663867d5bbbb4, type: 2}
-  t2_1: {fileID: 11400000, guid: 3dc3a1734eb46f34caa84969c5e5af5c, type: 2}
+  t2_1: {fileID: 11400000, guid: fce186884482ab048a85340e11ff8ee8, type: 2}
   t2_2: {fileID: 11400000, guid: 3dc3a1734eb46f34caa84969c5e5af5c, type: 2}
   t3_1: {fileID: 11400000, guid: fbc2e52ee623baa4da1b6ce292d216f5, type: 2}
   t3_2: {fileID: 11400000, guid: 06699b3d06d588748a59b2d22028f09d, type: 2}
-  WaveToStartLevel2: 2
-  WaveToStartLevel3: 3
+  WaveToStartLevel2: 4
+  WaveToStartLevel3: 8
   WaveCounterSource: {fileID: 0}
   l2: 0
   l3: 0

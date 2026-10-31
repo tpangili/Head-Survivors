@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3506360987443608588}
   m_Layer: 0
   m_Name: Timer Bullet
-  m_TagString: Untagged
+  m_TagString: enemy bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -8,7 +8,7 @@ public class HeadPickup : Pickup, ICollectible
 
     public void Collect()
     {
-        //Debug.Log("HEAD ADDED");
+        Debug.Log("HEAD ADDED");
         PlayerStats player = FindObjectOfType<PlayerStats>();
         InventoryManager inventory = FindObjectOfType<InventoryManager>();
         // Check if head is already in weapon inventory (99 means NO)
@@ -29,10 +29,10 @@ public class HeadPickup : Pickup, ICollectible
 
     public void OnTriggerEnter2D(Collider2D col)
     {
-        //Debug.Log("HEAD TRIGGER ENTERED");
+        Debug.Log("HEAD TRIGGER ENTERED");
         if (col.CompareTag("Player"))
         {
-            //Debug.Log("HEAD PICKED UP BY PLAYER");
+            Debug.Log("HEAD PICKED UP BY PLAYER");
             Collect();
         }
     }

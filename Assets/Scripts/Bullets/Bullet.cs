@@ -71,6 +71,9 @@ public class Bullet : MonoBehaviour
             }
             Destroy(gameObject);
             player.TakeDamage(damage);
+        } else if (other.CompareTag("Shield"))
+        {
+            Destroy(gameObject);
         }
     }
 }
