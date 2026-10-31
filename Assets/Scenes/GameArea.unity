@@ -1681,7 +1681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30}
+  m_AnchoredPosition: {x: 0, y: -50.3}
   m_SizeDelta: {x: 420, y: 69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443580911
@@ -4831,7 +4831,7 @@ MonoBehaviour:
   currentMightDisplay: {fileID: 389801145}
   currentProjectileSpeedDisplay: {fileID: 1254858492}
   currentMagnetDisplay: {fileID: 463399681}
-  timeLimit: 570
+  timeLimit: 565
   stopwatchDisplay: {fileID: 2122432317}
   isGameOver: 0
   isPaused: 0
