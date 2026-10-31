@@ -16,5 +16,5 @@ MonoBehaviour:
   level: 1
   nextLevelPrefab: {fileID: 5119619116241820687, guid: 0728816022458e24292e772672fdf9b2, type: 3}
   name: Heart Locket
-  description: Increases Max Health by 10
+  description: +20 Health, +10 Max Health
   icon: {fileID: 21300000, guid: 4b8e6602ff06fbe42b5b18ea48db37fd, type: 3}

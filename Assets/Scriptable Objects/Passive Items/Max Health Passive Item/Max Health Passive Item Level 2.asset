@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplier: 10
   level: 2
-  nextLevelPrefab: {fileID: 0}
+  nextLevelPrefab: {fileID: 5119619116241820687, guid: 7eccc2f5687983e408a69a614d63cb58, type: 3}
   name: Heart Locket Level 2
-  description: Increases Max Health by 10
+  description: +20 Health, +10 Max Health
   icon: {fileID: 21300000, guid: 4b8e6602ff06fbe42b5b18ea48db37fd, type: 3}
